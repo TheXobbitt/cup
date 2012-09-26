@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+{% block head %}
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('datetime', 'Date');
+            data.addColumn('number', 'Node 1482');
+            data.addColumn('number', 'Node 1483');
+            data.addColumn('number', 'Node 1484');
+            data.addRows([
+            {% for data in chart_mem_hourly %}
+                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+            {% endfor %}
+            ]);
+
+            var options = {
+                title: 'All nodes memory load hourly',
+                colors: ['#3D7930', '#FF9900', '#990066'],
+                width: 600,
+                height: 300,
+                hAxis: {minorGridlines: {count: 1}, format: 'HH:mm'}
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('mem_hourly'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('datetime', 'Date');
+            data.addColumn('number', 'Node 1482');
+            data.addColumn('number', 'Node 1483');
+            data.addColumn('number', 'Node 1484');
+            data.addRows([
+            {% for data in chart_cpu_hourly %}
+                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+            {% endfor %}
+            ]);
+
+            var options = {
+                title: 'All nodes CPU load hourly',
+                colors: ['#3D7930', '#FF9900', '#990066'],
+                width: 600,
+                height: 300,
+                hAxis: {minorGridlines: {count: 1}, format: 'HH:mm'}
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('cpu_hourly'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('datetime', 'Date');
+            data.addColumn('number', 'Node 1482');
+            data.addColumn('number', 'Node 1483');
+            data.addColumn('number', 'Node 1484');
+            data.addRows([
+            {% for data in chart_net_hourly %}
+                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+            {% endfor %}
+            ]);
+
+            var options = {
+                title: 'All nodes network load hourly',
+                colors: ['#3D7930', '#FF9900', '#990066'],
+                width: 600,
+                height: 300,
+                hAxis: {minorGridlines: {count: 1}, format: 'HH:mm'}
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('net_hourly'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('datetime', 'Date');
+            data.addColumn('number', 'Node 1482');
+            data.addColumn('number', 'Node 1483');
+            data.addColumn('number', 'Node 1484');
+            data.addRows([
+            {% for data in chart_conn_hourly %}
+                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+            {% endfor %}
+            ]);
+
+            var options = {
+                title: 'All nodes connection number hourly',
+                colors: ['#3D7930', '#FF9900', '#990066'],
+                width: 600,
+                height: 300,
+                hAxis: {minorGridlines: {count: 1}, format: 'HH:mm'}
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('conn_hourly'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('datetime', 'Date');
+            data.addColumn('number', 'Node 1482');
+            data.addColumn('number', 'Node 1483');
+            data.addColumn('number', 'Node 1484');
+            data.addRows([
+            {% for data in chart_mem_daily %}
+                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+            {% endfor %}
+            ]);
+
+            var options = {
+                title: 'All nodes memory load daily',
+                colors: ['#3D7930', '#FF9900', '#990066'],
+                width: 1000,
+                height: 300,
+                hAxis: {minorGridlines: {count: 3}, format: 'd MMM HH:mm'}
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('mem_daily'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('datetime', 'Date');
+            data.addColumn('number', 'Node 1482');
+            data.addColumn('number', 'Node 1483');
+            data.addColumn('number', 'Node 1484');
+            data.addRows([
+            {% for data in chart_cpu_daily %}
+                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+            {% endfor %}
+            ]);
+
+            var options = {
+                title: 'All nodes CPU load daily',
+                colors: ['#3D7930', '#FF9900', '#990066'],
+                width: 1000,
+                height: 300,
+                hAxis: {minorGridlines: {count: 3}, format: 'd MMM HH:mm'}
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('cpu_daily'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('datetime', 'Date');
+            data.addColumn('number', 'Node 1482');
+            data.addColumn('number', 'Node 1483');
+            data.addColumn('number', 'Node 1484');
+            data.addRows([
+            {% for data in chart_net_daily %}
+                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+            {% endfor %}
+            ]);
+
+            var options = {
+                title: 'All nodes network load daily',
+                colors: ['#3D7930', '#FF9900', '#990066'],
+                width: 1000,
+                height: 300,
+                hAxis: {minorGridlines: {count: 3}, format: 'd MMM HH:mm'}
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('net_daily'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('datetime', 'Date');
+            data.addColumn('number', 'Node 1482');
+            data.addColumn('number', 'Node 1483');
+            data.addColumn('number', 'Node 1484');
+            data.addRows([
+            {% for data in chart_conn_daily %}
+                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+            {% endfor %}
+            ]);
+
+            var options = {
+                title: 'All nodes connection number daily',
+                colors: ['#3D7930', '#FF9900', '#990066'],
+                width: 1000,
+                height: 300,
+                hAxis: {minorGridlines: {count: 3}, format: 'd MMM HH:mm'}
+            };
+
+            var chart = new google.visualization.AreaChart(document.getElementById('conn_daily'));
+            chart.draw(data, options);
+        }
+    </script>
+{% endblock %}
+{% block body %}
+    <table align=center>
+        <tr>
+            <td><div id="mem_hourly" style="width: 600px; height: 300px;"></div></td>
+            <td><div id="cpu_hourly" style="width: 600px; height: 300px;"></div></td>
+        </tr>
+        <tr>
+            <td><div id="net_hourly" style="width: 600px; height: 300px;"></div></td>
+            <td><div id="conn_hourly" style="width: 600px; height: 300px;"></div></td>
+        </tr>
+        <tr>
+            <td colspan=2 align=center><div id="mem_daily" style="width: 1000px; height: 300px;"></div></td>
+        </tr>
+        <tr>
+            <td colspan=2 align=center><div id="cpu_daily" style="width: 1000px; height: 300px;"></div></td>
+        </tr>
+        <tr>
+            <td colspan=2 align=center><div id="net_daily" style="width: 1000px; height: 300px;"></div></td>
+        </tr>
+        <tr>
+            <td colspan=2 align=center><div id="conn_daily" style="width: 1000px; height: 300px;"></div></div></td>
+        </tr>
+    </table>
+{% endblock %}
