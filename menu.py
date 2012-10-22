@@ -13,7 +13,7 @@ class CustomMenu(Menu):
             items.MenuItem(_('Administration'),
                 children = [
                     items.MenuItem(_('Clients'), '/admin/cc/client/'),
-                    items.MenuItem(_('Proxy servers'), '/admin/cc/proxyserver/'),
+                    items.MenuItem(_('Proxy servers'), '/admin/cc/node/'),
                 ]
             )
 #            items.AppList(

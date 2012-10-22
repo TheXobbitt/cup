@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from cc.models import Statistic, ProxyServer
+from cc.models import Statistic, Node
 from datetime import *
 
 class Stat:
@@ -18,8 +18,8 @@ def startpage(request):
     return render_to_response('startpage.html', locals(), context_instance = RequestContext(request))
 
 def stat(request):
-    nodes_hourly = {node.name.split(' ')[1]: Stat(node.name, 1) for node in ProxyServer.objects.filter(is_active = 1)}
-    nodes_daily = {node.name.split(' ')[1]: Stat(node.name, 24) for node in ProxyServer.objects.filter(is_active = 1)}
+    nodes_hourly = {node.name.split(' ')[1]: Stat(node.name, 1) for node in Node.objects.filter(is_active = 1)}
+    nodes_daily = {node.name.split(' ')[1]: Stat(node.name, 24) for node in Node.objects.filter(is_active = 1)}
 
     nodes_1482_hourly = Stat('Node 1482', 1)
     nodes_1482_daily = Stat('Node 1482', 24)
