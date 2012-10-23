@@ -26,10 +26,6 @@ class Command(BaseCommand):
                 mem_load = 100 - (mem * 100 / 1024) / self.mem_max
                 av_load = (net_load + cpu_load + mem_load) / 3
                 tcp_conn = int(commands.getoutput('snmpget -v 2c -c 1qaz2wsx3edc_ -Oqv %s TCP-MIB::tcpCurrEstab.0' % self.ip))
-                Node.objects.filter(ip=self.ip).update(mem_load=mem_load)
-                Node.objects.filter(ip=self.ip).update(cpu_load=cpu_load)
-                Node.objects.filter(ip=self.ip).update(net_load=net_load)
-                Node.objects.filter(ip=self.ip).update(av_load=av_load)
                 node = Node.objects.get(ip=self.ip)
                 Statistic.objects.create(node=node, mem_load=mem_load, cpu_load=cpu_load, net_load=net_load, av_load=av_load, tcp_conn=tcp_conn, date=self.period)
 
