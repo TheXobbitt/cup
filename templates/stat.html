@@ -7,18 +7,19 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1482');
-            data.addColumn('number', 'Node 1483');
-            data.addColumn('number', 'Node 1484');
+            data.addColumn('number', 'Node 1');
+            data.addColumn('number', 'Node 2');
+            data.addColumn('number', 'Node 3');
+            data.addColumn('number', 'Node 4');
             data.addRows([
             {% for data in chart_mem_hourly %}
-                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
             {% endfor %}
             ]);
 
             var options = {
                 title: 'All nodes memory load hourly',
-                colors: ['#3D7930', '#FF9900', '#990066'],
+                colors: ['#3D7930', '#FF9900', '#990066', '#995522'],
                 width: 600,
                 height: 300,
                 hAxis: {minorGridlines: {count: 1}, format: 'HH:mm'}
@@ -34,18 +35,19 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1482');
-            data.addColumn('number', 'Node 1483');
-            data.addColumn('number', 'Node 1484');
+            data.addColumn('number', 'Node 1');
+            data.addColumn('number', 'Node 2');
+            data.addColumn('number', 'Node 3');
+            data.addColumn('number', 'Node 4');
             data.addRows([
             {% for data in chart_cpu_hourly %}
-                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
             {% endfor %}
             ]);
 
             var options = {
                 title: 'All nodes CPU load hourly',
-                colors: ['#3D7930', '#FF9900', '#990066'],
+                colors: ['#3D7930', '#FF9900', '#990066', '#995522'],
                 width: 600,
                 height: 300,
                 hAxis: {minorGridlines: {count: 1}, format: 'HH:mm'}
@@ -61,18 +63,19 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1482');
-            data.addColumn('number', 'Node 1483');
-            data.addColumn('number', 'Node 1484');
+            data.addColumn('number', 'Node 1');
+            data.addColumn('number', 'Node 2');
+            data.addColumn('number', 'Node 3');
+            data.addColumn('number', 'Node 4');
             data.addRows([
             {% for data in chart_net_hourly %}
-                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
             {% endfor %}
             ]);
 
             var options = {
                 title: 'All nodes network load hourly',
-                colors: ['#3D7930', '#FF9900', '#990066'],
+                colors: ['#3D7930', '#FF9900', '#990066', '#995522'],
                 width: 600,
                 height: 300,
                 hAxis: {minorGridlines: {count: 1}, format: 'HH:mm'}
@@ -88,18 +91,19 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1482');
-            data.addColumn('number', 'Node 1483');
-            data.addColumn('number', 'Node 1484');
+            data.addColumn('number', 'Node 1');
+            data.addColumn('number', 'Node 2');
+            data.addColumn('number', 'Node 3');
+            data.addColumn('number', 'Node 4');
             data.addRows([
             {% for data in chart_conn_hourly %}
-                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
             {% endfor %}
             ]);
 
             var options = {
                 title: 'All nodes connection number hourly',
-                colors: ['#3D7930', '#FF9900', '#990066'],
+                colors: ['#3D7930', '#FF9900', '#990066', '#995522'],
                 width: 600,
                 height: 300,
                 hAxis: {minorGridlines: {count: 1}, format: 'HH:mm'}
@@ -115,18 +119,19 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1482');
-            data.addColumn('number', 'Node 1483');
-            data.addColumn('number', 'Node 1484');
+            data.addColumn('number', 'Node 1');
+            data.addColumn('number', 'Node 2');
+            data.addColumn('number', 'Node 3');
+            data.addColumn('number', 'Node 4');
             data.addRows([
             {% for data in chart_mem_daily %}
-                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
             {% endfor %}
             ]);
 
             var options = {
                 title: 'All nodes memory load daily',
-                colors: ['#3D7930', '#FF9900', '#990066'],
+                colors: ['#3D7930', '#FF9900', '#990066', '#995522'],
                 width: 1000,
                 height: 300,
                 hAxis: {minorGridlines: {count: 3}, format: 'd MMM HH:mm'}
@@ -142,18 +147,19 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1482');
-            data.addColumn('number', 'Node 1483');
-            data.addColumn('number', 'Node 1484');
+            data.addColumn('number', 'Node 1');
+            data.addColumn('number', 'Node 2');
+            data.addColumn('number', 'Node 3');
+            data.addColumn('number', 'Node 4');
             data.addRows([
             {% for data in chart_cpu_daily %}
-                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
             {% endfor %}
             ]);
 
             var options = {
                 title: 'All nodes CPU load daily',
-                colors: ['#3D7930', '#FF9900', '#990066'],
+                colors: ['#3D7930', '#FF9900', '#990066', '#995522'],
                 width: 1000,
                 height: 300,
                 hAxis: {minorGridlines: {count: 3}, format: 'd MMM HH:mm'}
@@ -169,18 +175,19 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1482');
-            data.addColumn('number', 'Node 1483');
-            data.addColumn('number', 'Node 1484');
+            data.addColumn('number', 'Node 1');
+            data.addColumn('number', 'Node 2');
+            data.addColumn('number', 'Node 3');
+            data.addColumn('number', 'Node 4');
             data.addRows([
             {% for data in chart_net_daily %}
-                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
             {% endfor %}
             ]);
 
             var options = {
                 title: 'All nodes network load daily',
-                colors: ['#3D7930', '#FF9900', '#990066'],
+                colors: ['#3D7930', '#FF9900', '#990066', '#995522'],
                 width: 1000,
                 height: 300,
                 hAxis: {minorGridlines: {count: 3}, format: 'd MMM HH:mm'}
@@ -196,18 +203,19 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1482');
-            data.addColumn('number', 'Node 1483');
-            data.addColumn('number', 'Node 1484');
+            data.addColumn('number', 'Node 1');
+            data.addColumn('number', 'Node 2');
+            data.addColumn('number', 'Node 3');
+            data.addColumn('number', 'Node 4');
             data.addRows([
             {% for data in chart_conn_daily %}
-                [new Date{{ data.date }}, {{ data.n1482 }}, {{ data.n1483 }}, {{ data.n1484 }}],
+                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
             {% endfor %}
             ]);
 
             var options = {
                 title: 'All nodes connection number daily',
-                colors: ['#3D7930', '#FF9900', '#990066'],
+                colors: ['#3D7930', '#FF9900', '#990066', '#995522'],
                 width: 1000,
                 height: 300,
                 hAxis: {minorGridlines: {count: 3}, format: 'd MMM HH:mm'}
@@ -241,5 +249,4 @@
             <td colspan=2 align=center><div id="conn_daily" style="width: 1000px; height: 300px;"></div></div></td>
         </tr>
     </table>
-    {{ test }}
 {% endblock %}

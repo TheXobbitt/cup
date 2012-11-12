@@ -32,3 +32,8 @@ class Statistic(models.Model):
 class BlackList(models.Model):
     ip = models.IPAddressField(null = 'False', unique = 'True', verbose_name = u'IP address')
     node = models.ManyToManyField(Node, verbose_name = u'Nodes')
+    is_active = models.BooleanField(default = True, verbose_name = u'Is active')
+    date = models.DateTimeField(auto_now = True, verbose_name = u'Last updated')
+
+    def __unicode__(self):
+        return self.ip

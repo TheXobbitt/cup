@@ -46,11 +46,17 @@ class StatisticAdmin(admin.ModelAdmin):
 
 class BlackListAdmin(admin.ModelAdmin):
     search_fields = ('ip', )
-    list_display = ('ip', )
+    list_display = ('ip', 'is_active')
     readonly_fields = ('ip', 'node')
-    list_filter = ('node__name', )
+    list_filter = ('node__name', 'is_active')
+    actions = ['make_deactive']
+
+    def make_deactive(modeladmin, request, queryset):
+        count = queryset.filter(is_active = True).update(is_active = False)
+        modeladmin.message_user(request, u'%s IP addresses deactivated.' % count)
+    make_deactive.short_description = u'Deactivate selected IP address'
 
 admin.site.register(Node, NodeAdmin)
 admin.site.register(Client, ClientAdmin)
-#admin.site.register(Statistic, StatisticAdmin)
+admin.site.register(Statistic, StatisticAdmin)
 admin.site.register(BlackList, BlackListAdmin)
