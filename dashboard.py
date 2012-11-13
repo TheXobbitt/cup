@@ -4,8 +4,6 @@ from django.core.urlresolvers import reverse
 from admin_tools.dashboard import modules, Dashboard, AppIndexDashboard
 from admin_tools.utils import get_admin_site_name
 
-import custommodules
-
 
 class CustomIndexDashboard(Dashboard):
     def init_with_context(self, context):
@@ -26,9 +24,6 @@ class CustomIndexDashboard(Dashboard):
 
         # control center models
         self.children.append(modules.ModelList(_('Control Center'), ['cc.*']))
-
-        # node select statistic
-        self.children.append(custommodules.NodeSelect(title = u'Choose nodes for statistic'))
 
         # append a recent actions module
         self.children.append(modules.RecentActions(_('Recent Actions'), 5))

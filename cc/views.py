@@ -14,8 +14,20 @@ class Stat:
         self.capt = [(node.date.year, node.date.month - 1, node.date.day, node.date.hour, node.date.minute, node.date.second) for node in stats]
 
 
-def startpage(request):
-    return render_to_response('startpage.html', locals(), context_instance = RequestContext(request))
+def index(request):
+    return render_to_response('index.html', locals(), context_instance = RequestContext(request))
+
+def features(request):
+    return render_to_response('features.html', locals(), context_instance = RequestContext(request))
+
+def pricing(request):
+    return render_to_response('pricing-tables.html', locals(), context_instance = RequestContext(request))
+
+def elements(request):
+    return render_to_response('elements.html', locals(), context_instance = RequestContext(request))
+
+def contact(request):
+    return render_to_response('contact-us.html', locals(), context_instance = RequestContext(request))
 
 def stat(request):
 #    nodes_hourly = {node.name.split(' ')[1]: Stat(node.name, 1) for node in Node.objects.filter(is_active = 1)}
