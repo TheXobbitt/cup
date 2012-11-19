@@ -8,13 +8,12 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1');
-            data.addColumn('number', 'Node 2');
-            data.addColumn('number', 'Node 3');
-            data.addColumn('number', 'Node 4');
+            {% for node in nodes %}
+            data.addColumn('number', '{{ node }}');
+            {% endfor %}
             data.addRows([
-            {% for data in chart_mem_hourly %}
-                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
+            {% for data in chart_hourly %}
+                [new Date{{ data.date }}{% for node in data.nodes %}, {{ node.mem }}{% endfor %}],
             {% endfor %}
             ]);
 
@@ -36,13 +35,12 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1');
-            data.addColumn('number', 'Node 2');
-            data.addColumn('number', 'Node 3');
-            data.addColumn('number', 'Node 4');
+            {% for node in nodes %}
+            data.addColumn('number', '{{ node }}');
+            {% endfor %}
             data.addRows([
-            {% for data in chart_cpu_hourly %}
-                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
+            {% for data in chart_hourly %}
+                [new Date{{ data.date }}{% for node in data.nodes %}, {{ node.cpu }}{% endfor %}],
             {% endfor %}
             ]);
 
@@ -64,13 +62,12 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1');
-            data.addColumn('number', 'Node 2');
-            data.addColumn('number', 'Node 3');
-            data.addColumn('number', 'Node 4');
+            {% for node in nodes %}
+            data.addColumn('number', '{{ node }}');
+            {% endfor %}
             data.addRows([
-            {% for data in chart_net_hourly %}
-                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
+            {% for data in chart_hourly %}
+                [new Date{{ data.date }}{% for node in data.nodes %}, {{ node.net }}{% endfor %}],
             {% endfor %}
             ]);
 
@@ -92,13 +89,12 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1');
-            data.addColumn('number', 'Node 2');
-            data.addColumn('number', 'Node 3');
-            data.addColumn('number', 'Node 4');
+            {% for node in nodes %}
+            data.addColumn('number', '{{ node }}');
+            {% endfor %}
             data.addRows([
-            {% for data in chart_conn_hourly %}
-                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
+            {% for data in chart_hourly %}
+                [new Date{{ data.date }}{% for node in data.nodes %}, {{ node.conn }}{% endfor %}],
             {% endfor %}
             ]);
 
@@ -120,13 +116,12 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1');
-            data.addColumn('number', 'Node 2');
-            data.addColumn('number', 'Node 3');
-            data.addColumn('number', 'Node 4');
+            {% for node in nodes %}
+            data.addColumn('number', '{{ node }}');
+            {% endfor %}
             data.addRows([
-            {% for data in chart_mem_daily %}
-                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
+            {% for data in chart_daily %}
+                [new Date{{ data.date }}{% for node in data.nodes %}, {{ node.mem }}{% endfor %}],
             {% endfor %}
             ]);
 
@@ -148,13 +143,12 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1');
-            data.addColumn('number', 'Node 2');
-            data.addColumn('number', 'Node 3');
-            data.addColumn('number', 'Node 4');
+            {% for node in nodes %}
+            data.addColumn('number', '{{ node }}');
+            {% endfor %}
             data.addRows([
-            {% for data in chart_cpu_daily %}
-                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
+            {% for data in chart_daily %}
+                [new Date{{ data.date }}{% for node in data.nodes %}, {{ node.cpu }}{% endfor %}],
             {% endfor %}
             ]);
 
@@ -176,13 +170,12 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1');
-            data.addColumn('number', 'Node 2');
-            data.addColumn('number', 'Node 3');
-            data.addColumn('number', 'Node 4');
+            {% for node in nodes %}
+            data.addColumn('number', '{{ node }}');
+            {% endfor %}
             data.addRows([
-            {% for data in chart_net_daily %}
-                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
+            {% for data in chart_daily %}
+                [new Date{{ data.date }}{% for node in data.nodes %}, {{ node.net }}{% endfor %}],
             {% endfor %}
             ]);
 
@@ -204,13 +197,12 @@
         function drawChart() {
             var data = new google.visualization.DataTable();
             data.addColumn('datetime', 'Date');
-            data.addColumn('number', 'Node 1');
-            data.addColumn('number', 'Node 2');
-            data.addColumn('number', 'Node 3');
-            data.addColumn('number', 'Node 4');
+            {% for node in nodes %}
+            data.addColumn('number', '{{ node }}');
+            {% endfor %}
             data.addRows([
-            {% for data in chart_conn_daily %}
-                [new Date{{ data.date }}, {{ data.n1 }}, {{ data.n2 }}, {{ data.n3 }}, {{ data.n4 }}],
+            {% for data in chart_daily %}
+                [new Date{{ data.date }}{% for node in data.nodes %}, {{ node.conn }}{% endfor %}],
             {% endfor %}
             ]);
 
@@ -227,6 +219,7 @@
         }
     </script>
 {% endblock %}
+{% block stat_li %}class="current"{% endblock %}
 {% block content %}
     <table align=center>
         <tr>
