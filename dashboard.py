@@ -16,6 +16,7 @@ class CustomIndexDashboard(Dashboard):
             deletable=False,
             collapsible=False,
             children=[
+                [_('Return to site'), '/'],
                 [_('Change password'),
                  reverse('%s:password_change' % site_name)],
                 [_('Log out'), reverse('%s:logout' % site_name)],
@@ -23,10 +24,18 @@ class CustomIndexDashboard(Dashboard):
         ))
 
         # control center models
-        self.children.append(modules.ModelList(_('Control Center'), ['cc.*']))
+        self.children.append(modules.Group(
+            title='Control center',
+            display="tabs",
+            children=[
+                modules.ModelList('Users and tariffs', ['django.contrib.auth.models.user', 'center.models.tariff']),
+                modules.ModelList('Nodes and domains', ['center.models.node', 'center.models.domain']),
+                modules.ModelList('Black list', ['center.models.blacklist',])
+            ]
+        ))
 
         # append a recent actions module
-        self.children.append(modules.RecentActions(_('Recent Actions'), 5))
+        self.children.append(modules.RecentActions(_('Recent Actions'), 10))
 
 class CustomAppIndexDashboard(AppIndexDashboard):
     """

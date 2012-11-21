@@ -1,5 +1,5 @@
 from django.contrib import admin
-from cc.models import Node, Client, Statistic, BlackList
+from center.models import Node, Domain, Statistic, BlackList, Tariff
 
 class NodeAdmin(admin.ModelAdmin):
     fieldsets = (
@@ -21,22 +21,22 @@ class NodeAdmin(admin.ModelAdmin):
         modeladmin.message_user(request, u'%s nodes deactivated.' % count)
     make_deactive.short_description = u'Deactivate selected nodes'
 
-class ClientAdmin(admin.ModelAdmin):
-    search_fields = ('domain', 'ip')
-    list_display = ('domain', 'is_active')
+class DomainAdmin(admin.ModelAdmin):
+    search_fields = ('name', 'ip')
+    list_display = ('name', 'is_active')
     list_filter = ('node__name', )
     filter_horizontal = ('node', )
     actions = ['make_active', 'make_deactive']
 
     def make_active(modeladmin, request, queryset):
         count = queryset.filter(is_active = False).update(is_active = True)
-        modeladmin.message_user(request, u'%s clients activated.' % count)
-    make_active.short_description = u'Activate selected clients'
+        modeladmin.message_user(request, u'%s domains activated.' % count)
+    make_active.short_description = u'Activate selected domains'
 
     def make_deactive(modeladmin, request, queryset):
         count = queryset.filter(is_active = True).update(is_active = False)
-        modeladmin.message_user(request, u'%s clients deactivated.' % count)
-    make_deactive.short_description = u'Deactivate selected clients'
+        modeladmin.message_user(request, u'%s domains deactivated.' % count)
+    make_deactive.short_description = u'Deactivate selected domains'
 
 class StatisticAdmin(admin.ModelAdmin):
     search_fields = ('node', )
@@ -48,7 +48,7 @@ class BlackListAdmin(admin.ModelAdmin):
     search_fields = ('ip', )
     list_display = ('ip', 'is_active')
     readonly_fields = ('ip', 'node')
-    list_filter = ('node__name', 'is_active')
+    list_filter = ('node__name', )
     actions = ['make_deactive']
 
     def make_deactive(modeladmin, request, queryset):
@@ -56,7 +56,13 @@ class BlackListAdmin(admin.ModelAdmin):
         modeladmin.message_user(request, u'%s IP addresses deactivated.' % count)
     make_deactive.short_description = u'Deactivate selected IP address'
 
+class TariffAdmin(admin.ModelAdmin):
+    search_fields = ('name', )
+    list_display = ('name', 'antidos', 'cache', 'compression', 'waf', 'monitoring', 'geoban', 'support')
+    list_filter = ('name', )
+
 admin.site.register(Node, NodeAdmin)
-admin.site.register(Client, ClientAdmin)
+admin.site.register(Domain, DomainAdmin)
 admin.site.register(Statistic, StatisticAdmin)
 admin.site.register(BlackList, BlackListAdmin)
+admin.site.register(Tariff, TariffAdmin)

@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
-from cc.models import Statistic, Node
+from center.models import Statistic, Node
 from datetime import *
 
 class Stat:
@@ -14,22 +14,6 @@ class Stat:
         self.net = [node.net_load for node in stats]
         self.conn = [node.tcp_conn for node in stats]
         self.capt = [(node.date.year, node.date.month - 1, node.date.day, node.date.hour, node.date.minute) for node in stats]
-
-
-def index(request):
-    return render_to_response('index.html', locals(), context_instance = RequestContext(request))
-
-def features(request):
-    return render_to_response('features.html', locals(), context_instance = RequestContext(request))
-
-def pricing(request):
-    return render_to_response('pricing-tables.html', locals(), context_instance = RequestContext(request))
-
-def elements(request):
-    return render_to_response('elements.html', locals(), context_instance = RequestContext(request))
-
-def contact(request):
-    return render_to_response('contact-us.html', locals(), context_instance = RequestContext(request))
 
 def stat(request):
     chart_hourly = list()
