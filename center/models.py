@@ -19,7 +19,7 @@ class Domain(models.Model):
     is_active = models.BooleanField(default=True, verbose_name=u'Is active')
 
     def __unicode__(self):
-        return self.domain
+        return self.name
 
 class Statistic(models.Model):
     node = models.ForeignKey(Node)

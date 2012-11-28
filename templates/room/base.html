@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block header %}
+<header id="header" class="container clearfix">
+
+    <a href="/" id="logo">
+        <img src="/static/img/logo.png" alt="SmartStart">
+    </a>
+
+    <nav id="main-nav">
+        
+        <ul>
+            <li {% block dashboard_li %}{% endblock %}>
+                <a href="/dashboard/" data-description="Site monitoring">Dashboard</a>
+            </li>
+            <li {% block billing_li %}{% endblock %}>
+                <a href="/billing/" data-description="Orders and payments">Billing</a>
+            </li>
+            <li {% block domains_li %}{% endblock %}>
+                <a href="/domains/" data-description="Plans and services">Sites</a>
+            </li>
+            <li {% block support_li %}{% endblock %}>
+                <a href="/support/" data-description="Ticket system">Support</a>
+
+            </li>
+            <li>
+                <a href="/accounts/logout/" data-description="Let me out">Sign Out</a>
+            </li>
+        </ul>
+
+
+    </nav><!-- end #main-nav -->
+    
+</header><!-- end #header -->
+{% endblock %}
+
+{% block footer-nav %}
+<nav id="footer-nav" class="clearfix">
+
+    <ul>
+        <li><a href="/dashboard/">Dashboard</a></li>
+        <li><a href="/billing/">Billing</a></li>
+        <li><a href="/domains/">Sites</a></li>
+        <li><a href="/support/">Support</a></li>
+        <li><a href="/accounts/logout/">Sign Out</a></li>
+    </ul>
+
+</nav><!-- end #footer-nav -->
+{% endblock %}

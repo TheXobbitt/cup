@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block header %}
+<header id="header" class="container clearfix">
+
+    <a href="/" id="logo">
+        <img src="/static/img/logo.png" alt="SmartStart">
+    </a>
+
+    <nav id="main-nav">
+        
+        <ul>
+            <li {% block home_li %}{% endblock %}>
+                <a href="/" data-description="All starts here">Home</a>
+            </li>
+            <li {% block features_li %}{% endblock %}>
+                <a href="/features/" data-description="Our features">Features</a>
+            </li>
+            <li {% block pricing_li %}{% endblock %}>
+                <a href="/pricing-tables/" data-description="Pricing tables">Pricing</a>
+            </li>
+            {% if not request.user.is_authenticated %}
+            <li {% block login_li %}{% endblock %}>
+                <a href="/accounts/login/" data-description="Enter in system">Sign In</a>
+            </li>
+            <li {% block signin_li %}{% endblock %}>
+                <a href="/accounts/register/" data-description="Register">Sign Up</a>
+            </li>
+            {% endif %}
+            {% if request.user.is_staff %}
+            <li {% block stat_li %}{% endblock %}>
+                <a href="/stat/" data-description="Statistic">Charts</a>
+            </li>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+            <li>
+                <a href="/dashboard/" data-description="Profile">{{ request.user }}</a>
+            </li>
+            <li>
+                <a href="/accounts/logout/" data-description="Let me out">Sign Out</a>
+            </li>
+            {% endif %}
+        </ul>
+
+    </nav><!-- end #main-nav -->
+    
+</header><!-- end #header -->
+{% endblock %}
+
+{% block footer-nav %}
+<nav id="footer-nav" class="clearfix">
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/features/">Features</a></li>
+        <li><a href="/pricing-tables/">Pricing</a></li>
+        {% if not request.user.is_authenticated %}
+        <li><a href="/accounts/login/">Sign In</a></li>
+        <li><a href="/accounts/register/">Sign Up</a></li>
+        {% endif %}
+        {% if request.user.is_staff %}
+        <li><a href="/stat/">Charts</a></li>
+        {% endif %}
+        {% if request.user.is_authenticated %}
+        <li><a href="/dashboard/">{{ request.user }}</a></li>
+        <li><a href="/accounts/logout/">Sign Out</a></li>
+        {% endif %}
+    </ul>
+
+</nav><!-- end #footer-nav -->
+{% endblock %}

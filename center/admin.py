@@ -4,7 +4,7 @@ from center.models import Node, Domain, Statistic, BlackList, Tariff
 class NodeAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
-            'fields': ('name', 'ip', ('mem_max', 'cpu_num', 'net_max'), 'is_active')
+            'fields': ('name', 'color', 'ip', ('mem_max', 'cpu_num', 'net_max'), 'is_active')
         }),
     )
     search_fields = ('name', 'ip')

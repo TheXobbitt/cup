@@ -1,0 +1,128 @@
+{% extends "room/base.html" %}
+
+{% block title %}Antiddos Plans{% endblock %}
+{% block dashboard_li %}class="current"{% endblock %}
+    
+{% block content %}
+<section id="content" class="container clearfix">
+
+    <header class="page-header">
+
+        <h1 class="page-title">Management and Monitoring</h1>
+
+    </header><!-- end .page-header -->
+<p><a href="#" class="button">+ Add new site</a> &nbsp &nbsp &nbsp Add new site to protect from ddos and others malicious attacks</p>
+    <div class="three-fourth">
+      <h4 class="acc-trigger"> <a href="#">xo-company.org </a></h4>
+       <div  class="acc-container">
+          <ul class="tabs-nav">
+            <li class="active">
+                <a href="#tab1">Monitoring</a>
+            </li>
+            <li>
+                <a href="#tab2">BlackList</a>
+            </li>
+            <li>
+                <a href="#tab3">WhiteList</a>
+            </li>
+            <li>
+                <a href="#tab4">DNS Records</a>
+            </li>
+
+        </ul>
+        <div class="tabs-container">
+
+            <div class="tab-content" id="tab1" style="display: block; ">
+                <img src="http://www.arkadian.eu/wp-content/uploads/2010/04/gnuplot_sample.jpg">
+            </div><!-- end #tab1 -->
+
+            <div class="tab-content" id="tab2" style="display: none; ">
+                <p class="textarea-block">
+                    <label><strong>Search IP in BlackList</strong></label>
+                    <textarea name="message" id="contact-message" cols="88" rows="1" required></textarea>
+                </p>
+                <input type="submit" value="Search">
+                <div class="clear"></div>
+            </div><!-- end #tab2 -->
+
+            <div class="tab-content" id="tab3" style="display: none; ">
+                <p class="textarea-block">
+                    <label><strong>Add IPs to WhiteList</strong> (separate by coma)</label>
+                    <textarea name="message" id="contact-message" cols="88" rows="3" required></textarea>
+                </p>
+                <input type="submit" value="Add">
+
+                <div class="clear"></div>
+            </div><!-- end #tab3 -->
+
+            <div class="tab-content" id="tab4" style="display: block; ">
+                <p>Show current site's DNS records</p>
+            </div><!-- end #tab4 -->
+
+        </div>
+       </div><!-- end .acc_container -->
+
+      <h4 class="acc-trigger"> <a href="#">xo-company2.org </a></h4>
+       <div  class="acc-container">
+          <ul class="tabs-nav">
+            <li class="active">
+                <a href="#tab1">Monitoring</a>
+            </li>
+            <li>
+                <a href="#tab2">BlackList</a>
+            </li>
+            <li>
+                <a href="#tab3">WhiteList</a>
+            </li>
+            <li>
+                <a href="#tab4">DNS Records</a>
+            </li>
+
+        </ul>
+        <div class="tabs-container">
+
+            <div class="tab-content" id="tab1" style="display: block; ">
+                <img src="http://www.arkadian.eu/wp-content/uploads/2010/04/gnuplot_sample.jpg">
+            </div><!-- end #tab1 -->
+
+            <div class="tab-content" id="tab2" style="display: none; ">
+                <p class="textarea-block">
+                    <label><strong>Search IP in BlackList</strong></label>
+                    <textarea name="message" id="contact-message" cols="88" rows="1" required></textarea>
+                </p>
+                <input type="submit" value="Search">
+                <div class="clear"></div>
+            </div><!-- end #tab2 -->
+
+            <div class="tab-content" id="tab3" style="display: none; ">
+                <p class="textarea-block">
+                    <label><strong>Add IPs to WhiteList</strong> (separate by coma)</label>
+                    <textarea name="message" id="contact-message" cols="88" rows="3" required></textarea>
+                </p>
+                <input type="submit" value="Add">
+
+                <div class="clear"></div>
+            </div><!-- end #tab3 -->
+            <div class="tab-content" id="tab4" style="display: block; ">
+                <p>Show current site's DNS records</p>
+            </div><!-- end #tab4 -->
+
+        </div>
+       </div><!-- end .acc_container -->
+
+    </div><!-- end .three-fourth -->
+
+    <div class="one-fourth last">
+
+        <h4>Have a question?</h4>
+
+        <p>Not a problem! Contact us to let us know how you can help you.</p>
+
+        <h4>
+            <em><a href="/support/" class="button no-bg">Drop us a line <span class="arrow">&raquo;</span></a></em>
+        </h4>
+        
+    </div><!-- end .one-fourth.last -->
+    
+</section><!-- end #content -->
+{% endblock %}

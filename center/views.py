@@ -1,5 +1,6 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
+from django.contrib.auth.decorators import login_required
 from center.models import Statistic, Node
 from datetime import *
 
@@ -15,12 +16,13 @@ class Stat:
         self.conn = [node.tcp_conn for node in stats]
         self.capt = [(node.date.year, node.date.month - 1, node.date.day, node.date.hour, node.date.minute) for node in stats]
 
+@login_required
 def stat(request):
     chart_hourly = list()
     chart_daily = list()
-    nodes = [node.name.replace('_', ' ') for node in Node.objects.filter(is_active = True)]
-    nodes_hourly = [Stat(node, 1) for node in nodes]
-    nodes_daily = [Stat(node, 24) for node in nodes]
+    nodes = [{'name': node.name.replace('_', ' '), 'color': node.color} for node in Node.objects.filter(is_active = True)]
+    nodes_hourly = [Stat(node['name'], 1) for node in nodes]
+    nodes_daily = [Stat(node['name'], 24) for node in nodes]
 
     for i in xrange(12):
         node_list = []

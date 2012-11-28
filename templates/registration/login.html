@@ -1,10 +1,14 @@
-{% extends "base.html" %}
+{% extends "general/base.html" %}
 
 {% block title %}Login{% endblock %}
 {% block login_li %}class="current"{% endblock %}
 {% block content %}
-<h1>Авторизация</h1>
+<section id="content" class="container clearfix">
+    <header class="page-header">
 
+        <h1 class="page-title">Sign In</h1>
+
+    </header><!-- end .page-header -->
 {% if user.is_authenticated %}
 Что такое, {{ user.username }}? Вы же уже авторизорваны. 
 Впрочем, всегда можно <a href="{% url auth_logout %}">выйти</a>.<br/><br/>
@@ -24,8 +28,8 @@
     </dd>
 {% endfor %}
 </dl>
-<input type="hidden" name="next" value="/" />
-<input type="submit" value="Вход" / class="clearfix">
+<input type="submit" value="Sign In" / class="clearfix">
+<input type="hidden" name="next" value="{{ next }}" />
 </form>
     
 <script type="text/javascript">
@@ -34,8 +38,9 @@ document.getElementById('id_username').focus()
 
  <br/><br/>
 <ul>
-    <li><a href="{% url auth_password_reset %}">Забыли пароль?</a></li>
-    <li><a href="{% url registration_register %}">Регистрация</a></li>
+    <li><a href="{% url auth_password_reset %}">Forgot your password?</a></li>
+    <li><a href="{% url registration_register %}">Sign Up</a></li>
 </ul>   
 {% endif %}
+</section><!-- end #content -->
 {% endblock %}

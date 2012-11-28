@@ -5,151 +5,110 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
-	<title>{% block title %}{% endblock %}</title>
-	
-	<meta name="description" content="">
-	<meta name="author" content="">
-	
-	<!--[if !lte IE 6]><!-->
-		<link rel="stylesheet" href="/static/css/style.css" media="screen" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>{% block title %}{% endblock %}</title>
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!--[if !lte IE 6]><!-->
+        <link rel="stylesheet" href="/static/css/style.css" media="screen" />
 
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic" />
-		
-		<link rel="stylesheet" href="/static/css/fancybox.min.css" media="screen" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic" />
+        
+        <link rel="stylesheet" href="/static/css/fancybox.min.css" media="screen" />
 
-		<link rel="stylesheet" href="/static/css/video-js.min.css" media="screen" />
+        <link rel="stylesheet" href="/static/css/video-js.min.css" media="screen" />
 
-		<link rel="stylesheet" href="/static/css/audioplayerv1.min.css" media="screen" />
-	<!--<![endif]-->
+        <link rel="stylesheet" href="/static/css/audioplayerv1.min.css" media="screen" />
+    <!--<![endif]-->
 
-	<!--[if lte IE 6]>
-		<link rel="stylesheet" href="//universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
-	<![endif]-->
+    <!--[if lte IE 6]>
+        <link rel="stylesheet" href="//universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+    <![endif]-->
 
-	<!-- HTML5 Shiv + detect touch events -->
-	<script src="/static/js/modernizr.custom.js"></script>
+    <!-- HTML5 Shiv + detect touch events -->
+    <script src="/static/js/modernizr.custom.js"></script>
 
-	<!-- HTML5 video player -->
-	<script src="/static/js/video.min.js"></script>
-	<script>_V_.options.flash.swf = '/static/js/video-js.swf';</script>
-	{% block head %}{% endblock %}
+    <!-- HTML5 video player -->
+    <script src="/static/js/video.min.js"></script>
+    <script>_V_.options.flash.swf = '/static/js/video-js.swf';</script>
+    {% block head %}{% endblock %}
 </head>
 <body>
 
-<header id="header" class="container clearfix">
-
-	<a href="/" id="logo">
-		<img src="/static/img/logo.png" alt="SmartStart">
-	</a>
-
-	<nav id="main-nav">
-		
-		<ul>
-			<li {% block home_li %}{% endblock %}>
-				<a href="/" data-description="All starts here">Home</a>
-			</li>
-			<li {% block features_li %}{% endblock %}>
-				<a href="/features/" data-description="Our features">Features</a>
-			</li>
-			<li {% block pricing_li %}{% endblock %}>
-				<a href="/pricing-tables/" data-description="Pricing tables">Pricing</a>
-			</li>
-			<li {% block login_li %}{% endblock %}>
-				<a href="/accounts/login/" data-description="Enter in system">Login</a>
-			</li>
-			<li {% block signin_li %}{% endblock %}>
-				<a href="/accounts/register/" data-description="Register">Sing In</a>
-			</li>
-			<li {% block stat_li %}{% endblock %}>
-				<a href="/stat/" data-description="Statistic">Charts</a>
-			</li>
-		</ul>
-
-	</nav><!-- end #main-nav -->
-	
-</header><!-- end #header -->
+{% block header %}{% endblock %}
 
 {% block content %}{% endblock %}
 
 <footer id="footer" class="clearfix">
 
-	<div class="container">
+    <div class="container">
 
-		<div class="three-fourth">
+        <div class="three-fourth">
 
-			<nav id="footer-nav" class="clearfix">
+            {% block footer-nav %}
+            {% endblock %}
 
-				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/features/">Features</a></li>
-					<li><a href="/pricing-tables/">Pricing</a></li>
-					<li><a href="/accounts/login/">Login</a></li>
-					<li><a href="/accounts/register/">Sign Up</a></li>
-					<li><a href="/stat/">Charts</a></li>
-				</ul>
-				
-			</nav><!-- end #footer-nav -->
+            <ul class="contact-info">
+                <li class="address">012 Some Street. New York, NY, 12345. USA</li>
+                <li class="phone">(123) 456-7890</li>
+                <li class="email"><a href="mailto:contact@companyname.com">contact@companyname.com</a></li>
+            </ul><!-- end .contact-info -->
+            
+        </div><!-- end .three-fourth -->
 
-			<ul class="contact-info">
-				<li class="address">012 Some Street. New York, NY, 12345. USA</li>
-				<li class="phone">(123) 456-7890</li>
-				<li class="email"><a href="mailto:contact@companyname.com">contact@companyname.com</a></li>
-			</ul><!-- end .contact-info -->
-			
-		</div><!-- end .three-fourth -->
+        <div class="one-fourth last">
 
-		<div class="one-fourth last">
+            <span class="title">Stay connected</span>
 
-			<span class="title">Stay connected</span>
+            <ul class="social-links">
+                <li class="twitter"><a href="#">Twitter</a></li>
+                <li class="facebook"><a href="#">Facebook</a></li>
+                <li class="digg"><a href="#">Digg</a></li>
+                <li class="vimeo"><a href="#">Vimeo</a></li>
+                <li class="youtube"><a href="#">YouTube</a></li>
+                <li class="skype"><a href="#">Skype</a></li>
+            </ul><!-- end .social-links -->
 
-			<ul class="social-links">
-				<li class="twitter"><a href="#">Twitter</a></li>
-				<li class="facebook"><a href="#">Facebook</a></li>
-				<li class="digg"><a href="#">Digg</a></li>
-				<li class="vimeo"><a href="#">Vimeo</a></li>
-				<li class="youtube"><a href="#">YouTube</a></li>
-				<li class="skype"><a href="#">Skype</a></li>
-			</ul><!-- end .social-links -->
-
-		</div><!-- end .one-fourth.last -->
-		
-	</div><!-- end .container -->
+        </div><!-- end .one-fourth.last -->
+        
+    </div><!-- end .container -->
 
 </footer><!-- end #footer -->
 
 <footer id="footer-bottom" class="clearfix">
 
-	<div class="container">
+    <div class="container">
 
-		<ul>
-			<li>Hi-Cloud &copy; 2012</li>
-		</ul>
+        <ul>
+            <li>Hi-Cloud &copy; 2012</li>
+        </ul>
 
-	</div><!-- end .container -->
+    </div><!-- end .container -->
 
 </footer><!-- end #footer-bottom -->
 
 <!--[if !lte IE 6]><!-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="/static/js/jquery-1.7.1.min.js"><\/script>')</script>
-	<!--[if lt IE 9]> <script src="js/selectivizr-and-extra-selectors.min.js"></script> <![endif]-->
-	<script src="/static/js/jquery.ui.widget.min.js"></script>
-	<script src="/static/js/respond.min.js"></script>
-	<script src="/static/js/jquery.easing-1.3.min.js"></script>
-	<script src="/static/js/jquery.fancybox.pack.js"></script>
-	<script src="/static/js/jquery.smartStartSlider.min.js"></script>
-	<script src="/static/js/jquery.jcarousel.min.js"></script>
-	<script src="/static/js/jquery.cycle.all.min.js"></script>
-	<script src="/static/js/jquery.isotope.min.js"></script>
-	<script src="/static/js/audioplayerv1.min.js"></script>
-	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-	<script src="/static/js/jquery.gmap.min.js"></script>
-	<script src="/static/js/jquery.touchSwipe.min.js"></script>
-	<script src="/static/js/custom.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/jquery-1.7.1.min.js"><\/script>')</script>
+    <!--[if lt IE 9]> <script src="js/selectivizr-and-extra-selectors.min.js"></script> <![endif]-->
+    <script src="/static/js/jquery.ui.widget.min.js"></script>
+    <script src="/static/js/respond.min.js"></script>
+    <script src="/static/js/jquery.easing-1.3.min.js"></script>
+    <script src="/static/js/jquery.fancybox.pack.js"></script>
+    <script src="/static/js/jquery.smartStartSlider.min.js"></script>
+    <script src="/static/js/jquery.jcarousel.min.js"></script>
+    <script src="/static/js/jquery.cycle.all.min.js"></script>
+    <script src="/static/js/jquery.isotope.min.js"></script>
+    <script src="/static/js/audioplayerv1.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="/static/js/jquery.gmap.min.js"></script>
+    <script src="/static/js/jquery.touchSwipe.min.js"></script>
+    <script src="/static/js/custom.js"></script>
 <!--<![endif]-->
 </body>
 
