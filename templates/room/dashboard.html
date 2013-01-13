@@ -1,19 +1,32 @@
 {% extends "room/base.html" %}
 
 {% block title %}Antiddos Plans{% endblock %}
+{% block jquery %}
+<script src="/static/js/jquery.grewform.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('#blacklist').grewform({
+            {% for ip in black_ips %}'#black_ip[value="{{ ip }}"]':{
+                show:'#black_ip_text'
+            },{% endfor %}
+        })
+    })
+</script>
+{% endblock %}
 {% block dashboard_li %}class="current"{% endblock %}
-    
+
 {% block content %}
 <section id="content" class="container clearfix">
 
     <header class="page-header">
 
         <h1 class="page-title">Management and Monitoring</h1>
-
+{% for domain in domains %}{{ chart }}{% endfor %}
     </header><!-- end .page-header -->
-<p><a href="#" class="button">+ Add new site</a> &nbsp &nbsp &nbsp Add new site to protect from ddos and others malicious attacks</p>
+<p><a href="/add/" class="button">+ Add new site</a> &nbsp &nbsp &nbsp Add new site to protect from ddos and others malicious attacks</p>
     <div class="three-fourth">
-      <h4 class="acc-trigger"> <a href="#">xo-company.org </a></h4>
+      {% for domain in domains %}
+      <h4 class="acc-trigger"> <a href="#">{{ domain }}</a></h4>
        <div  class="acc-container">
           <ul class="tabs-nav">
             <li class="active">
@@ -37,11 +50,15 @@
             </div><!-- end #tab1 -->
 
             <div class="tab-content" id="tab2" style="display: none; ">
-                <p class="textarea-block">
-                    <label><strong>Search IP in BlackList</strong></label>
-                    <textarea name="message" id="contact-message" cols="88" rows="1" required></textarea>
-                </p>
-                <input type="submit" value="Search">
+                <form id="blacklist">
+                    <p class="textarea-block">
+                        <label><strong>Search IP in BlackList</strong></label>
+                        <input id="black_ip" value="">
+                    </p>
+                    <p id="black_ip_text" style="display: none">
+                        This IP is in black list
+                    </p>
+                </form>
                 <div class="clear"></div>
             </div><!-- end #tab2 -->
 
@@ -56,59 +73,13 @@
             </div><!-- end #tab3 -->
 
             <div class="tab-content" id="tab4" style="display: block; ">
-                <p>Show current site's DNS records</p>
+                <p>Show current site's DNS records:</p>
+                ns.lee01-xoprotect.in
             </div><!-- end #tab4 -->
 
         </div>
        </div><!-- end .acc_container -->
-
-      <h4 class="acc-trigger"> <a href="#">xo-company2.org </a></h4>
-       <div  class="acc-container">
-          <ul class="tabs-nav">
-            <li class="active">
-                <a href="#tab1">Monitoring</a>
-            </li>
-            <li>
-                <a href="#tab2">BlackList</a>
-            </li>
-            <li>
-                <a href="#tab3">WhiteList</a>
-            </li>
-            <li>
-                <a href="#tab4">DNS Records</a>
-            </li>
-
-        </ul>
-        <div class="tabs-container">
-
-            <div class="tab-content" id="tab1" style="display: block; ">
-                <img src="http://www.arkadian.eu/wp-content/uploads/2010/04/gnuplot_sample.jpg">
-            </div><!-- end #tab1 -->
-
-            <div class="tab-content" id="tab2" style="display: none; ">
-                <p class="textarea-block">
-                    <label><strong>Search IP in BlackList</strong></label>
-                    <textarea name="message" id="contact-message" cols="88" rows="1" required></textarea>
-                </p>
-                <input type="submit" value="Search">
-                <div class="clear"></div>
-            </div><!-- end #tab2 -->
-
-            <div class="tab-content" id="tab3" style="display: none; ">
-                <p class="textarea-block">
-                    <label><strong>Add IPs to WhiteList</strong> (separate by coma)</label>
-                    <textarea name="message" id="contact-message" cols="88" rows="3" required></textarea>
-                </p>
-                <input type="submit" value="Add">
-
-                <div class="clear"></div>
-            </div><!-- end #tab3 -->
-            <div class="tab-content" id="tab4" style="display: block; ">
-                <p>Show current site's DNS records</p>
-            </div><!-- end #tab4 -->
-
-        </div>
-       </div><!-- end .acc_container -->
+       {% endfor %}
 
     </div><!-- end .three-fourth -->
 

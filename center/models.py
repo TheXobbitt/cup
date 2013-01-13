@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Node(models.Model):
     name = models.CharField(max_length=20, unique=True, verbose_name=u'Node number', help_text=u'Example: Node_N, where N = number')
@@ -13,6 +14,7 @@ class Node(models.Model):
         return self.name
 
 class Domain(models.Model):
+    user = models.ForeignKey(User)
     name = models.CharField(max_length=100, verbose_name=u'Domain name', help_text=u'Domain name of the client')
     ip = models.CharField(max_length=100, verbose_name='IP addresses', help_text=u'IP addresses of the client servers. Example: 10.0.0.1;10.0.0.2')
     node = models.ManyToManyField(Node, verbose_name=u'Nodes')
@@ -30,6 +32,15 @@ class Statistic(models.Model):
     tcp_conn = models.IntegerField(null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
 
+class SiteStatistic(models.Model):
+    node = models.ForeignKey(Node)
+    site = models.ForeignKey(Domain)
+    access = models.IntegerField()
+    access_old = models.IntegerField()
+    error = models.IntegerField()
+    error_old = models.IntegerField()
+    date = models.DateTimeField(auto_now_add=True)
+
 class BlackList(models.Model):
     ip = models.IPAddressField(null=False, unique=True, verbose_name=u'IP address')
     node = models.ManyToManyField(Node, verbose_name=u'Nodes')
@@ -39,35 +50,55 @@ class BlackList(models.Model):
     def __unicode__(self):
         return self.ip
 
+class TariffSites(models.Model):
+    name = models.CharField(max_length=20, unique=True)
+    number = models.IntegerField(verbose_name=u'Number of sites')
+
+    def __unicode__(self):
+        return self.name
+
+class TariffNodes(models.Model):
+    name = models.CharField(max_length=20, unique=True)
+    number = models.IntegerField(verbose_name=u'Number of nodes')
+
+    def __unicode__(self):
+        return self.name
+
+class TariffWaf(models.Model):
+    name = models.CharField(max_length=20, unique=True)
+    code = models.CharField(max_length=5, unique=True)
+
+    def __unicode__(self):
+        return self.name
+
+class TariffCache(models.Model):
+    name = models.CharField(max_length=20, unique=True)
+    time = models.IntegerField(verbose_name=u'Time in minutes')
+
+    def __unicode__(self):
+        return self.name
+
+class TariffSupport(models.Model):
+    name = models.CharField(max_length=20, unique=True)
+    code = models.CharField(max_length=5, unique=True)
+
+    def __unicode__(self):
+        return self.name
+
 class Tariff(models.Model):
-    ANTIDOS = (
-        ('5', '5 nodes'),
-        ('10', '10 nodes'),
-        ('15', '15 nodes'),
-    )
-    CACHE = (
-        ('1440', '1 day'),
-        ('60', '1 hour'),
-        ('10', '10 minutes'),
-    )
-    WAF = (
-        ('no', 'No'),
-        ('yes', 'Standart'),
-        ('custom', 'Custom'),
-    )
-    SUPPORT = (
-        ('tick', 'Tickets'),
-        ('tel', 'Tickets, Telephone'),
-        ('adm', 'Tickets, Telephone, Admin')
-    )
     name = models.CharField(max_length=50, unique=True, verbose_name=u'Tariff')
-    antidos = models.CharField(max_length=2, choices=ANTIDOS, verbose_name=u'Antidos support')
-    cache = models.CharField(max_length=4, choices=CACHE, verbose_name=u'Cache update time')
-    compression = models.BooleanField(default=False, verbose_name=u'Compression')
-    waf = models.CharField(max_length=6, choices=WAF, verbose_name=u'WAF')
-    monitoring = models.BooleanField(default=False, verbose_name=u'Monitoring')
-    geoban = models.BooleanField(default=False, verbose_name=u'Geoban support')
-    support = models.CharField(max_length=4, choices=SUPPORT, verbose_name=u'Support')
+    sites = models.ForeignKey(TariffSites)
+    antidos = models.BooleanField(default=True, verbose_name=u'AntiDDoS')
+    antiprogs = models.BooleanField(default=True, verbose_name=u'AntiProgs')
+    nodes = models.ForeignKey(TariffNodes)
+    waf = models.ForeignKey(TariffWaf)
+    geoban = models.BooleanField(default=True, verbose_name=u'Geoban support')
+    ipban = models.BooleanField(default=True, verbose_name=u'IPban support')
+    whitelist = models.BooleanField(default=True, verbose_name=u'Whitelist support')
+    cache = models.ForeignKey(TariffCache)
+    compression = models.BooleanField(default=False, )
+    pictures = models.BooleanField(default=False, )
+    support = models.ForeignKey(TariffSupport)
 
     def __unicode__(self):
         return self.name

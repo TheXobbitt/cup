@@ -9,13 +9,13 @@ from client.models import UserProfile
 class UserProfileInline(admin.StackedInline):
     model = UserProfile
     can_delete = False
-    verbose_name_plural = 'tariff and domains'
+    verbose_name_plural = 'tariff'
     fieldsets = (
         (None, {
-            'fields': ('tariff', 'domains')
+            'fields': ('tariff', 'order_date')
         }),
     )
-    readonly_fields = ('domains', 'tariff')
+    readonly_fields = ('tariff', 'order_date')
 
 # Define a new User admin
 class UserAdmin(UserAdmin):

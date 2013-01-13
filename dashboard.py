@@ -28,9 +28,9 @@ class CustomIndexDashboard(Dashboard):
             title='Control center',
             display="tabs",
             children=[
-                modules.ModelList('Users and tariffs', ['django.contrib.auth.models.user', 'center.models.tariff']),
-                modules.ModelList('Nodes and domains', ['center.models.node', 'center.models.domain']),
-                modules.ModelList('Black list', ['center.models.blacklist',])
+                modules.ModelList('Users and tariffs', ['django.contrib.auth.models.User', 'center.models.Tariff']),
+                modules.ModelList('Nodes and domains', ['center.models.Node', 'center.models.Domain']),
+                modules.ModelList('Black list', ['center.models.BlackList',])
             ]
         ))
 
