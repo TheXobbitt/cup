@@ -13,9 +13,9 @@ class Stat:
     def __init__(self, site_name, period):
         start_time = datetime.now() - timedelta(hours = period, minutes = 1)
         stats = SiteStatistic.objects.filter(site__name = site_name).filter(date__gt = start_time)
-        site_info = [{'date': '%s.%s.%s.%s.%s' % (site.date.year, site.date.month, site.date.day, site.date.hour, site.date.minute), 'error': site.error, 'access': site.access} for site in stats]
-        site_date = ['%s.%s.%s.%s.%s' % (site.date.year, site.date.month, site.date.day, site.date.hour, site.date.minute) for site in stats]
-        site_date = dict(zip(site_date, site_date)).values()
+        site_info = [{'date': '%s.%s.%s.%s.%s' % (site.date.year, site.date.month - 1, site.date.day, site.date.hour, site.date.minute), 'error': site.error, 'access': site.access} for site in stats]
+        site_date = ['%s.%s.%s.%s.%s' % (site.date.year, site.date.month - 1, site.date.day, site.date.hour, site.date.minute) for site in stats]
+        site_date = [e for i,e in enumerate(site_date) if e not in site_date[:i]]
         site_info_tmp = []
         for date in site_date:
             error = 0
@@ -61,7 +61,7 @@ def dashboard(request):
     site_stat = [Stat(domain.name, 1) for domain in domains]
 
     chart = []
-    for i in xrange(1):
+    for i in xrange(12):
         site_list = []
         for site in site_stat:
             site_list.append({'name': site.name, 'error': site.error[i], 'access': site.access[i]})

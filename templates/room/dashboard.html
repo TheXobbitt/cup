@@ -1,5 +1,37 @@
 {% extends "room/base.html" %}
 
+{% block head %}
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    {% for domain in domains %}
+        <script type="text/javascript">
+            google.load("visualization", "1", {packages:["corechart"]});
+            google.setOnLoadCallback(drawChart);
+            function drawChart() {
+                var data = new google.visualization.DataTable();
+                data.addColumn('datetime', 'Date');
+                data.addColumn('number', 'Access');
+                data.addColumn('number', 'Errors');
+                data.addRows([
+                {% for data in chart %}
+                    [new Date{{ data.date }}, {% for site in data.sites %}{% if site.name == domain.name %}{{ site.access }}, {{ site.error }}{% endif %}{% endfor %}],
+                {% endfor %}
+                ]);
+
+                var options = {
+                    title: '',
+                    colors: ['#00FF00', '#FF0000'],
+                    width: 650,
+                    height: 200,
+                    hAxis: {minorGridlines: {count: 1}, format: 'HH:mm'}
+                };
+
+                var chart = new google.visualization.AreaChart(document.getElementById('chart_{{ domain }}'));
+                chart.draw(data, options);
+            }
+        </script>
+    {% endfor %}
+{% endblock %}
+
 {% block title %}Antiddos Plans{% endblock %}
 {% block jquery %}
 <script src="/static/js/jquery.grewform.min.js"></script>
@@ -21,7 +53,7 @@
     <header class="page-header">
 
         <h1 class="page-title">Management and Monitoring</h1>
-{% for domain in domains %}{{ chart }}{% endfor %}
+
     </header><!-- end .page-header -->
 <p><a href="/add/" class="button">+ Add new site</a> &nbsp &nbsp &nbsp Add new site to protect from ddos and others malicious attacks</p>
     <div class="three-fourth">
@@ -46,7 +78,7 @@
         <div class="tabs-container">
 
             <div class="tab-content" id="tab1" style="display: block; ">
-                <img src="http://www.arkadian.eu/wp-content/uploads/2010/04/gnuplot_sample.jpg">
+                <div id="chart_{{ domain }}" style="width: 650px; height: 200px;"></div>
             </div><!-- end #tab1 -->
 
             <div class="tab-content" id="tab2" style="display: none; ">
