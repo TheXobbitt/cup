@@ -12,10 +12,10 @@ class UserProfileInline(admin.StackedInline):
     verbose_name_plural = 'tariff'
     fieldsets = (
         (None, {
-            'fields': ('tariff', 'order_date')
+            'fields': ('tariff', 'balance', 'order_date')
         }),
     )
-    readonly_fields = ('tariff', 'order_date')
+    readonly_fields = ('order_date',)
 
 # Define a new User admin
 class UserAdmin(UserAdmin):

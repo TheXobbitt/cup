@@ -79,7 +79,7 @@ class TariffSupportAdmin(admin.ModelAdmin):
 
 class TariffAdmin(admin.ModelAdmin):
     search_fields = ('name', )
-    list_display = ('name', 'sites', 'antidos', 'antiprogs', 'nodes', 'waf', 'geoban', 'ipban', 'whitelist', 'cache', 'compression', 'pictures', 'support')
+    list_display = ('name', 'price', 'sites', 'antidos', 'antiprogs', 'nodes', 'waf', 'geoban', 'ipban', 'whitelist', 'cache', 'compression', 'pictures', 'support')
 
 admin.site.register(Node, NodeAdmin)
 admin.site.register(Domain, DomainAdmin)

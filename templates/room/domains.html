@@ -8,17 +8,15 @@
 
     <header class="page-header">
 
-        <h1 class="page-title">Sites and Services</h1>
+        <h1 class="page-title">Plans and Services</h1>
 
     </header><!-- end .page-header -->
     
     <div class="-fourth">
 <p><a href="/add/" class="button">+ Add new site</a> &nbsp &nbsp &nbsp Add new site to protect from ddos and others malicious attacks</p>
-        {% for domain in domains %}
         <h4 class="acc-trigger">
-            <a href="#">{{ domain }}</a>
         </h4>
-       <div class="acc-container">
+       <div class="acc-container"><br>
 
         <section class="extended-pricing-table col4 featured clearfix">
 
@@ -30,12 +28,17 @@
             </div><!-- end .header -->
 
             <ul class="features clearfix">
+                <li>Sites</li>
                 <li>AntiDDoS support</li>
+                <li>AntiProgs support</li>
+                <li>Nodes in use</li>
+                <li>WAF</li>
+                <li>Geoban support</li>
+                <li>IPban support</li>
+                <li>Whitelist support</li>
                 <li>Cache update time</li>
                 <li>Compression</li>
-                <li>WAF</li>
-                <li>Monitoring</li>
-                <li>Geoban support</li>
+                <li>Pictures</li>
                 <li>Support</li>
             </ul><!-- end .features -->
 
@@ -50,12 +53,18 @@
             </div><!-- end .header -->
 
             <ul class="features clearfix">
-                <li data-tooltip="Tooltip - Optional description can go here!">{{ tariff.antidos }} nodes</li>
+                <li data-tooltip="Tooltip - Optional description can go here!">{{ domains_count }}/{{ tariff.sites }}</li>
+                <li data-tooltip="Tooltip - Optional description can go here!">{% if tariff.antidos %}<span class="check">&check;</span>{% else %}&mdash;{% endif %}</li>
+                <li data-tooltip="Tooltip - Optional description can go here!">{% if tariff.antiprogs %}<span class="check">&check;</span>{% else %}&mdash;{% endif %}</li>
+                <li data-tooltip="Tooltip - Optional description can go here!">{{ tariff.nodes }}</li>
+                <li data-tooltip="Tooltip - Optional description can go here!">{% if tariff.waf %}<span class="check">&check;</span>{% else %}&mdash;{% endif %}</li>
+                <li data-tooltip="Tooltip - Optional description can go here!">{% if tariff.geoban %}<span class="check">&check;</span>{% else %}&mdash;{% endif %}</li>
+                <li data-tooltip="Tooltip - Optional description can go here!">{% if tariff.ipban %}<span class="check">&check;</span>{% else %}&mdash;{% endif %}</li>
+                <li data-tooltip="Tooltip - Optional description can go here!">{% if tariff.whitelist %}<span class="check">&check;</span>{% else %}&mdash;{% endif %}</li>
                 <li data-tooltip="Tooltip - Optional description can go here!">{{ tariff.cache }}</li>
                 <li data-tooltip="Tooltip - Optional description can go here!">{% if tariff.compression %}<span class="check">&check;</span>{% else %}&mdash;{% endif %}</li>
-                <li data-tooltip="Tooltip - Optional description can go here!">{% if tariff.waf %}<span class="check">&check;</span>{% else %}&mdash;{% endif %}</li>
-                <li data-tooltip="Tooltip - Optional description can go here!">{% if tariff.monitoring %}<span class="check">&check;</span>{% else %}&mdash;{% endif %}</li>
-                <li data-tooltip="Tooltip - Optional description can go here!">{% if tariff.geoban %}<span class="check">&check;</span>{% else %}&mdash;{% endif %}</li>
+                
+                <li data-tooltip="Tooltip - Optional description can go here!">{% if tariff.pictures %}<span class="check">&check;</span>{% else %}&mdash;{% endif %}</li>
                 <li data-tooltip="Tooltip - Optional description can go here!">{{ tariff.support }}</li>
             </ul><!-- end .features -->
 
@@ -66,7 +75,7 @@
 
             <div class="header">
                 <h2 class="title">Features</h2>
-                <h3 class="price"><span>100$</span>per month</h3>
+                <h3 class="price"><span>{{ tariff.price }}$</span>per month</h3>
             </div><!-- end .header -->
 
             <ul class="features clearfix">
@@ -74,9 +83,14 @@
                 <li data-feature="Comments"><span class="check">&check;</span></li>
                 <li data-feature="Comments"><span class="check">&check;</span></li>
                 <li data-feature="Comments"><span class="check">&check;</span></li>
-                <li data-feature="Comments">&mdash;</li>
-                <li data-feature="Comments">&mdash;</li>
-                <li data-feature="Comments">&mdash;</li>
+                <li data-feature="Comments"><span class="check">&check;</span></li>
+                <li data-feature="Comments"><span class="check">&check;</span></li>
+                <li data-feature="Comments"><span class="check">&check;</span></li>
+                <li data-feature="Comments"><span class="check">&check;</span></li>
+                <li data-feature="Comments"><span class="check">&check;</span></li>
+                <li data-feature="Comments"><span class="check">&check;</span></li>
+                <li data-feature="Comments"><span class="check">&check;</span></li>
+                <li data-feature="Comments"><span class="check">&check;</span></li>
             </ul><!-- end .features -->
 
         </div><!-- end .column.free -->
@@ -85,16 +99,15 @@
                   <a class="button" href="/dashboard/">View Dashboard</a>
             </div><!-- end .footer -->
             <div class="footer">
-                <a class="button" href="#">Update balance</a>
+                <a class="button" href="/billing/">Update balance</a>
             </div><!-- end .footer -->
             <div class="footer">
-                <a class="button" href="#">Add features</a>
+                <a class="button" href="/tariff/">Add features</a>
             </div><!-- end .footer -->
 
 
         </section><!-- end .simple-pricing-table -->
     
        </div><!-- end .acc_container -->
-       {% endfor %}
 </section><!-- end #content -->
 {% endblock %}

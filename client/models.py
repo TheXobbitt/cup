@@ -9,7 +9,8 @@ class UserProfile(models.Model):
     user = models.OneToOneField(User)
 
     # Other fields here
-    order_date = models.DateTimeField(auto_now_add=True, verbose_name=u'Order date')
+    balance = models.IntegerField(null=True, blank=True)
+    order_date = models.DateTimeField(null=True, blank=True, verbose_name=u'Order date')
     tariff = models.ForeignKey(Tariff, null=True, blank=True)
 
 def create_user_profile(sender, instance, created, **kwargs):

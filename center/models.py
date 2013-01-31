@@ -87,6 +87,7 @@ class TariffSupport(models.Model):
 
 class Tariff(models.Model):
     name = models.CharField(max_length=50, unique=True, verbose_name=u'Tariff')
+    price = models.IntegerField(max_length=10, unique=True, verbose_name=u'Price')
     sites = models.ForeignKey(TariffSites)
     antidos = models.BooleanField(default=True, verbose_name=u'AntiDDoS')
     antiprogs = models.BooleanField(default=True, verbose_name=u'AntiProgs')

@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.template import RequestContext
 
 from django.contrib.auth.models import User
-from center.models import Domain, Tariff, BlackList, SiteStatistic
+from center.models import Node, Domain, Tariff, BlackList, SiteStatistic
 from client.models import UserProfile
 
 from datetime import datetime, timedelta
@@ -52,20 +52,38 @@ def contact(request):
 
 @login_required
 def billing(request):
+    client = UserProfile.objects.get(user=request.user)
+    tariff_name = client.tariff
+    if not tariff_name:
+        return redirect('/tariff/')
+
     return render_to_response('room/billing.html', locals(), context_instance = RequestContext(request))
 
 @login_required
 def dashboard(request):
     client = UserProfile.objects.get(user=request.user)
+    tariff_name = client.tariff
+    if not tariff_name:
+        return redirect('/tariff/')
     domains = Domain.objects.filter(user=request.user).filter(is_active=True)
     site_stat = [Stat(domain.name, 1) for domain in domains]
+    site_capt_len = 0
+    for site in site_stat:
+        if len(site.capt) > site_capt_len:
+            site_capt_len = len(site.capt)
+            site_capt = site
 
     chart = []
-    for i in xrange(12):
+    if site_capt_len > 12:
+        site_capt_len = 12
+    for i in xrange(site_capt_len):
         site_list = []
         for site in site_stat:
-            site_list.append({'name': site.name, 'error': site.error[i], 'access': site.access[i]})
-        chart.append({'date': site_stat[0].capt[i], 'sites': site_list})
+            try:
+                site_list.append({'name': site.name, 'error': site.error[i], 'access': site.access[i]})
+            except Exception, e:
+                pass
+        chart.append({'date': site_capt.capt[i], 'sites': site_list})
 
     black_ips = BlackList.objects.all()
 
@@ -73,18 +91,13 @@ def dashboard(request):
 
 @login_required
 def domains(request):
-#    client = UserProfile.objects.get(user=request.user)
-#    tariff_name = client.tariff
-#    domains = client.domains.all()
-#    tariff = Tariff.objects.get(name=tariff_name)
-#    if tariff.waf == 'no':
-#        tariff.waf = False
-#    else:
-#        tariff.waf = True
-#    tariff_cache = {'1440': '1 day', '60': '1 hour', '10': '10 minutes'}
-#    tariff_support = {'tick': 'Tickets', 'tel': 'Tickets, Telephone', 'adm': 'Tickets, Telephone, Admin'}
-#    tariff = {'antidos': tariff.antidos, 'cache': tariff_cache[tariff.cache], 'compression': tariff.compression, 'waf': tariff.waf, 'monitoring': tariff.monitoring, 'geoban': tariff.geoban, 'support': tariff_support[tariff.support]}
-#
+    client = UserProfile.objects.get(user=request.user)
+    tariff_name = client.tariff
+    if not tariff_name:
+        return redirect('/tariff/')
+    domains_count = Domain.objects.filter(user=request.user).count()
+    tariff = Tariff.objects.get(name=tariff_name)
+
     return render_to_response('room/domains.html', locals(), context_instance = RequestContext(request))
 
 @login_required
@@ -93,13 +106,33 @@ def support(request):
 
 @login_required
 def add_new_site(request):
-    tariffs = Tariff.objects.all()
     if request.method == 'POST':
         site = request.POST['site']
-        tariff = request.POST['tariff']
+        client = UserProfile.objects.get(user=request.user)
+        tariff_name = client.tariff
+        tariff = Tariff.objects.get(name=tariff_name)
+        nodes_number = tariff.nodes.number
         site_ip = [ip[4][0] for ip in socket.getaddrinfo(site, 80)]
         site_ip = ';'.join(site_ip)
+        nodes = Node.objects.all()
+        try:
+            nodes = nodes[:nodes_number]
+        except Exception, e:
+            pass
         Domain.objects.create(user=request.user, name=site, ip=site_ip, is_active=True)
+        for node in nodes:
+            Domain.objects.get(name=site).node.add(node.id)
         return redirect('/dashboard/')
 
     return render_to_response('room/add_new_site.html', locals(), context_instance = RequestContext(request))
+
+@login_required
+def change_tariff(request):
+    tariffs = Tariff.objects.all()
+    if request.method == 'POST':
+        tariff = request.POST['tariff']
+        tariff_obj = Tariff.objects.get(name=tariff)
+        UserProfile.objects.filter(user=request.user).update(tariff=tariff_obj)
+        return redirect('/domains/')
+
+    return render_to_response('room/change_tariff.html', locals(), context_instance = RequestContext(request))
