@@ -26,11 +26,7 @@
                 <a href="/{{ request.LANGUAGE_CODE }}/billing/" data-description="Orders and payments">Billing</a>
             </li>
             <li {% block domains_li %}{% endblock %}>
-<<<<<<< HEAD
-                <a href="/domains/" data-description="Plans and services">Features</a>
-=======
-                <a href="/{{ request.LANGUAGE_CODE }}/domains/" data-description="Plans and services">Sites</a>
->>>>>>> Internationalization of the site
+                <a href="/{{ request.LANGUAGE_CODE }}/domains/" data-description="Plans and services">Features</a>
             </li>
             <li {% block support_li %}{% endblock %}>
                 <a href="/{{ request.LANGUAGE_CODE }}/support/" data-description="Ticket system">Support</a>
@@ -51,19 +47,11 @@
 <nav id="footer-nav" class="clearfix">
 
     <ul>
-<<<<<<< HEAD
-        <li><a href="/dashboard/">Dashboard</a></li>
-        <li><a href="/billing/">Billing</a></li>
-        <li><a href="/domains/">Features</a></li>
-        <li><a href="/support/">Support</a></li>
-        <li><a href="/accounts/logout/">Sign Out</a></li>
-=======
         <li><a href="/{{ request.LANGUAGE_CODE }}/dashboard/">Dashboard</a></li>
         <li><a href="/{{ request.LANGUAGE_CODE }}/billing/">Billing</a></li>
-        <li><a href="/{{ request.LANGUAGE_CODE }}/domains/">Sites</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/domains/">Features</a></li>
         <li><a href="/{{ request.LANGUAGE_CODE }}/support/">Support</a></li>
         <li><a href="/{{ request.LANGUAGE_CODE }}/accounts/logout/">Sign Out</a></li>
->>>>>>> Internationalization of the site
     </ul>
 
 </nav><!-- end #footer-nav -->
