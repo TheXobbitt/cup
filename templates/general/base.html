@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load localeurl_tags %}
+{% load i18n %}
 
 {% block header %}
 <header id="header" class="container clearfix">
@@ -7,24 +9,32 @@
         <img src="/static/img/logo.png" alt="SmartStart">
     </a>
 
+    {% for lang in LANGUAGES %}
+        {% ifequal lang.0 LANGUAGE_CODE %}
+            <img src="/static/img/{{ lang.0 }}_bw.png">
+        {% else %}
+            <a href="{{ request.path|chlocale:lang.0 }}"><img src="/static/img/{{ lang.0 }}.png"></a>
+        {% endifequal %}
+    {% endfor %}
+
     <nav id="main-nav">
         
         <ul>
             <li {% block home_li %}{% endblock %}>
-                <a href="/" data-description="All starts here">Home</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/" data-description="All starts here">Home</a>
             </li>
             <li {% block features_li %}{% endblock %}>
-                <a href="/features/" data-description="Our features">Features</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/features/" data-description="What we offer">Features</a>
             </li>
             <li {% block pricing_li %}{% endblock %}>
-                <a href="/pricing-tables/" data-description="Pricing tables">Pricing</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/pricing-tables/" data-description="What we charge">Pricing</a>
             </li>
             {% if not request.user.is_authenticated %}
             <li {% block login_li %}{% endblock %}>
-                <a href="/accounts/login/" data-description="Enter in system">Sign In</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/accounts/login/" data-description="Enter the system">Log In</a>
             </li>
             <li {% block signin_li %}{% endblock %}>
-                <a href="/accounts/register/" data-description="Register">Sign Up</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/accounts/register/" data-description="Register">Sign Up</a>
             </li>
             {% endif %}
             {% if request.user.is_staff %}
@@ -34,10 +44,10 @@
             {% endif %}
             {% if request.user.is_authenticated %}
             <li>
-                <a href="/dashboard/" data-description="Profile">{{ request.user }}</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/dashboard/" data-description="Profile">{{ request.user }}</a>
             </li>
             <li>
-                <a href="/accounts/logout/" data-description="Let me out">Sign Out</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/accounts/logout/" data-description="Let me out">Sign Out</a>
             </li>
             {% endif %}
         </ul>
@@ -51,19 +61,19 @@
 <nav id="footer-nav" class="clearfix">
 
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/features/">Features</a></li>
-        <li><a href="/pricing-tables/">Pricing</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/">Home</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/features/">Features</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/pricing-tables/">Pricing</a></li>
         {% if not request.user.is_authenticated %}
-        <li><a href="/accounts/login/">Sign In</a></li>
-        <li><a href="/accounts/register/">Sign Up</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/accounts/login/">Log In</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/accounts/register/">Sign Up</a></li>
         {% endif %}
         {% if request.user.is_staff %}
         <li><a href="/stat/">Charts</a></li>
         {% endif %}
         {% if request.user.is_authenticated %}
-        <li><a href="/dashboard/">{{ request.user }}</a></li>
-        <li><a href="/accounts/logout/">Sign Out</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/dashboard/">{{ request.user }}</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/accounts/logout/">Sign Out</a></li>
         {% endif %}
     </ul>
 

@@ -13,7 +13,12 @@
     </header><!-- end .page-header -->
     
     <div class="-fourth">
+<<<<<<< HEAD
 <p><a href="/add/" class="button">+ Add new site</a> &nbsp &nbsp &nbsp Add new site to protect from ddos and others malicious attacks</p>
+=======
+<p><a href="/{{ request.LANGUAGE_CODE }}/add/" class="button">+ Add new site</a> &nbsp &nbsp &nbsp Add new site to protect from ddos and others malicious attacks</p>
+        {% for domain in domains %}
+>>>>>>> Internationalization of the site
         <h4 class="acc-trigger">
         </h4>
        <div class="acc-container"><br>
@@ -96,7 +101,7 @@
         </div><!-- end .column.free -->
 
             <div class="footer">
-                  <a class="button" href="/dashboard/">View Dashboard</a>
+                  <a class="button" href="/{{ request.LANGUAGE_CODE }}/dashboard/">View Dashboard</a>
             </div><!-- end .footer -->
             <div class="footer">
                 <a class="button" href="/billing/">Update balance</a>

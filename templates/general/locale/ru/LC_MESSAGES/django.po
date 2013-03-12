@@ -1,0 +1,282 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-12 14:34+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: .\features.html.py:12
+msgid "Comprehensive security of websites"
+msgstr "Комплексная защита сайтов"
+
+#: .\features.html.py:21
+msgid "We eliminate $1000 cost DDoS attack in 10 minutes"
+msgstr "Гасим DDoS атаку стоимостью $1000 за 10 минут"
+
+#: .\features.html.py:24
+msgid "We increase website uptime to 99.99&#37;"
+msgstr "Подымаем время сайта в онлайн до 99.99&#37;"
+
+#: .\features.html.py:27
+msgid "We increase web pages load speed to 70&#37;"
+msgstr "Ускоряем загрузку страниц до 70%"
+
+#: .\features.html.py:30
+msgid ""
+"We protect websites from hacking attacks types: SQL&#92;XSS-injection, "
+"LFI&#92;RFI, CSRF and etc."
+msgstr ""
+"Защищаем сайты от взлома через атаки типа: SQL&#92;XSS-injection, LFI&#92;"
+"RFI, CSRF и т.п."
+
+#: .\features.html.py:33
+msgid ""
+"We cooperate with CERT’s, block bot-nets, maintain the &quot;blacklist&quot; "
+"of violators"
+msgstr ""
+"Сотрудничаем с CERT'ами, блокируем бот-неты, ведем &quot;блэклист&quot; "
+"нарушителей..."
+
+#: .\features.html.py:39
+msgid "Globally distributed network for neutralization of DDoS"
+msgstr "ГЕО-распределенная система борьбы с DDoS"
+
+#: .\features.html.py:44
+msgid ""
+"Our system of elimination of DDoS and other network attacks – is globally "
+"distributed network of servers spread around the globe in order to achieve "
+"the maximum upload speed of content to the client. For direct website "
+"content upload customer selects the least loaded server in the system. "
+"Requests from malicious sources (bot-nets) for the current server is blocked "
+"by special detector of anomalous traffic and identified hosts fall into the "
+"black list for all servers of distributed network simultaneously, which "
+"allows you to block heavy attacks on the denial of service."
+msgstr ""
+"Наша система борьбы с DDoS и другими сетевыми атаками - это распределенная "
+"сеть множества серверов разнесенных географически для достижения "
+"максимальной скорости отдачи контента клиенту. Для непосредственной отдачи "
+"контента Web-сайта клиенту выбирается наименее нагруженный запросами сервер "
+"в системе. Запросы от зловредных источников (бот-нетов) на текущий сервер "
+"блокируется специальным детектором аномального трафика и выявленные хосты "
+"попадают в черный список по всем серверам распределенной сети одновременно, "
+"что позволяет блокировать тяжелые атаки на отказ в обслуживании."
+
+#: .\features.html.py:48
+msgid "Web-filter on network attacks"
+msgstr "Web-фильтр сетевых атак"
+
+#: .\features.html.py:53
+msgid ""
+"In order to prevent the hacking of website we use WAF – is a firewall, which "
+"works on applied level and maintains the traffic filtering of Web "
+"applications. This solution does not require changes to the source code of "
+"Web-pages and effectively protects websites from network attacks such as: "
+"SQL, XSS-injection, LFI&#92;RFI, CSRF, etc."
+msgstr ""
+"Для противодействия взлома сайта мы применяем WAF - межсетевой экран, "
+"работающий на прикладном уровне и осуществляющий фильтрацию трафика Web-"
+"приложений. Данное решение не требует изменений в исходном коде Web-страниц "
+"и эффективно защищает Web-сайты от сетевых атак типа: SQL, XSS-инъекций, "
+"LFI&#92;RFI, CSRF и т.п."
+
+#: .\features.html.py:57
+msgid "Website upload speed increase"
+msgstr "Ускорение загрузки сайта"
+
+#: .\features.html.py:62
+msgid ""
+"The upload speed of Web-page depends on the distance between the server and "
+"content user. Placement of content of one resource between several servers "
+"distributed geographically makes the website upload speed much faster. "
+"Furthermore, the use of compression algorithms optimizes the speed of the "
+"content site for mobile platforms. The average content compression reduces "
+"the size of HTTP-response by 70&#37;."
+msgstr ""
+"На скорость загрузки Web-страницы сильно влияет насколько далеко "
+"пользователь находится от вашего сервера. Размещение контента одного ресурса "
+"между несколькими серверами, разнесенными географически, делает загрузку "
+"сайта быстрее. Кроме того, применение алгоритмов сжатия контента "
+"оптимизирует скорость работы сайта для мобильных платформ. В среднем сжатие "
+"контента уменьшает размер HTTP-ответа на 70&#37;."
+
+#: .\features.html.py:66
+msgid "99.99&#37; of uptime"
+msgstr "99.99&#37; времени в онлайн"
+
+#: .\features.html.py:71
+msgid ""
+"It is important that your websites are available at any time of the day or "
+"night. Indeed, because of problems with your hosting provider, you can lose "
+"some of your income. Our system allows you to have HTML-version of your site "
+"in dozens of datacenters across the world at the same time, which reduces "
+"the downtime to a minimum and the site allows you to be independent of the "
+"host or Internet service providers."
+msgstr ""
+"Очень важно, чтобы ваши сайты были доступны в любое время дня и ночи. Ведь "
+"из-за проблем у вашего хостинг-провайдера вы можете потерять некоторую часть "
+"своего дохода. Наша система позволяет иметь HTML-версию Вашего ресурса в "
+"нескольких десятках датацентров по всему миру одновременно, что сводит время "
+"недоступности сайта до минимума и позволяет не зависеть от хостинг или "
+"интернет провайдеров."
+
+#: .\features.html.py:76
+msgid "Savings on tariffs of hosting provider"
+msgstr "Экономия на тарифах хостинг-провайдера"
+
+#: .\features.html.py:81
+msgid ""
+"Massive DDoS-attack drains quickly the amount of prepaid traffic in tariff "
+"of hosting provider. By connecting your site to a global distributed system, "
+"you save the amount of traffic and the hosting computer resources."
+msgstr ""
+"Массивная DDoS-атака очень быстро расходует количество предоплаченного "
+"трафика в тарифе хостинг-провайдера. Подключив ваш сайт к распределенной "
+"системе, вы экономите на объеме трафика и на вычислительных ресурсах "
+"хостинга."
+
+#: .\features.html.py:89
+msgid "Have a question?"
+msgstr "Созрел вопрос?"
+
+#: .\features.html.py:92
+msgid "Drop us a line"
+msgstr "Свяжитесь с нашими специалистами"
+
+#: .\index.html.py:10
+msgid "Professional website protection. Security in THREE steps!"
+msgstr "Профессиональная защита сайта. Безопасность в ТРИ хода!"
+
+#: .\index.html.py:19 .\index.html.py:24
+msgid "Registration"
+msgstr "Регистрация"
+
+#: .\index.html.py:20
+msgid "of new member in the system"
+msgstr "нового пользователя в системе"
+
+#: .\index.html.py:25
+msgid ""
+"All you need is to fulfill the registration form and to receive the "
+"activation code of your e-mail."
+msgstr ""
+"Все что нужно, это заполнить регистрационную форму и получить код активации "
+"по почте"
+
+#: .\index.html.py:26 .\index.html.py:44 .\index.html.py:62 .\index.html.py:80
+msgid "Details..."
+msgstr "Подробнее..."
+
+#: .\index.html.py:37 .\index.html.py:42
+msgid "Website connection"
+msgstr "Подключение сайта"
+
+#: .\index.html.py:38
+msgid "to add your resource in our security space"
+msgstr "для включения ресурса в нашу систему защиты"
+
+#: .\index.html.py:43
+msgid ""
+"There is no need to change your host server or internet provider while "
+"connecting your website, adding your website requires only a simple change "
+"to your domain’s DNS settings."
+msgstr ""
+"При включении сайта в систему защиты нет надобности менять старый хостинг "
+"или провайдера, достаточно просто указать наши DNS сервера как основные для "
+"Вашего ресурса."
+
+#: .\index.html.py:55 .\index.html.py:60
+msgid "Security activation"
+msgstr "Активация защиты"
+
+#: .\index.html.py:56
+msgid "by selecting the appropriate functionality of protection"
+msgstr "путем выбора необходимого функционала безопасности"
+
+#: .\index.html.py:61
+msgid ""
+"Protective mechanisms can be chosen automatically with tariff plan, as well "
+"as most effective to your resource system parameters."
+msgstr ""
+"Защитные механизмы можно выбирать как автоматически вместе с тарифным "
+"планом, так и наиболее эффективные по отношению к параметрам Вашего ресурса."
+
+#: .\index.html.py:73 .\index.html.py:78
+msgid "Safe online"
+msgstr "Безопасная работа"
+
+#: .\index.html.py:74
+msgid "speeding and protection of website from network attacks!"
+msgstr "ускорение работы и защиты сайта от сетевых атак!"
+
+#: .\index.html.py:79
+msgid ""
+"Protection of website and increase the download speed by using our globally "
+"distributed system of malicious traffic filtering"
+msgstr ""
+"Защита сайта и повышение скорости загрузки за счет нашей ГЕО-распределенной "
+"системы фильтрации зловредного трафика."
+
+#: .\index.html.py:87
+msgid ""
+"Attack-ready tools of protection (Technology of protection from attacks)"
+msgstr "Технологии защиты от атак"
+
+#: .\index.html.py:94
+msgid "Globally distributed network"
+msgstr "ГЕО-распределенная система"
+
+#: .\index.html.py:95
+msgid ""
+"Our system is a globally distributed network of servers, which acts "
+"effectively to prevent the DdoS attacks"
+msgstr ""
+"Наша система борьбы с DDoS и другими сетевыми атаками – это распределенная "
+"сеть серверов по всему миру"
+
+#: .\index.html.py:102
+msgid "Network attacks Web-filter"
+msgstr "Web-фильтр сетевых атак"
+
+#: .\index.html.py:103
+msgid ""
+"In order to prevent the hacking of website we use WAF with personal settings "
+"configuration capability"
+msgstr ""
+"Для противодействия взлома сайта мы применяем WAF с возможностью "
+"персональной настройки"
+
+#: .\index.html.py:110
+msgid "Website load speed up"
+msgstr "Ускорение загрузки сайта"
+
+#: .\index.html.py:111
+msgid ""
+"Due to data compression algorithms, web pages load speed increases to 70&#37;"
+msgstr ""
+"Благодаря алгоритмам сжатия данных, скорость загрузки страниц сайта "
+"увеличивается до 70&#37;"
+
+#: .\index.html.py:119
+msgid "99.99&#37; online uptime"
+msgstr "99.99&#37; времени в онлайн"
+
+#: .\index.html.py:120
+msgid ""
+"HTML-version of your resource is available in major datacenters around the "
+"world simultaneously"
+msgstr ""
+"HTML-версия Вашего ресурса доступна в нескольких десятках датацентров по "
+"всему миру одновременно"

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load localeurl_tags %}
 
 {% block header %}
 <header id="header" class="container clearfix">
@@ -7,24 +8,36 @@
         <img src="/static/img/logo.png" alt="SmartStart">
     </a>
 
+    {% for lang in LANGUAGES %}
+        {% ifequal lang.0 LANGUAGE_CODE %}
+            <img src="/static/img/{{ lang.0 }}_bw.png">
+        {% else %}
+            <a href="{{ request.path|chlocale:lang.0 }}"><img src="/static/img/{{ lang.0 }}.png"></a>
+        {% endifequal %}
+    {% endfor %}
+
     <nav id="main-nav">
         
         <ul>
             <li {% block dashboard_li %}{% endblock %}>
-                <a href="/dashboard/" data-description="Site monitoring">Dashboard</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/dashboard/" data-description="Site monitoring">Dashboard</a>
             </li>
             <li {% block billing_li %}{% endblock %}>
-                <a href="/billing/" data-description="Orders and payments">Billing</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/billing/" data-description="Orders and payments">Billing</a>
             </li>
             <li {% block domains_li %}{% endblock %}>
+<<<<<<< HEAD
                 <a href="/domains/" data-description="Plans and services">Features</a>
+=======
+                <a href="/{{ request.LANGUAGE_CODE }}/domains/" data-description="Plans and services">Sites</a>
+>>>>>>> Internationalization of the site
             </li>
             <li {% block support_li %}{% endblock %}>
-                <a href="/support/" data-description="Ticket system">Support</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/support/" data-description="Ticket system">Support</a>
 
             </li>
             <li>
-                <a href="/accounts/logout/" data-description="Let me out">Sign Out</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/accounts/logout/" data-description="Let me out">Sign Out</a>
             </li>
         </ul>
 
@@ -38,11 +51,19 @@
 <nav id="footer-nav" class="clearfix">
 
     <ul>
+<<<<<<< HEAD
         <li><a href="/dashboard/">Dashboard</a></li>
         <li><a href="/billing/">Billing</a></li>
         <li><a href="/domains/">Features</a></li>
         <li><a href="/support/">Support</a></li>
         <li><a href="/accounts/logout/">Sign Out</a></li>
+=======
+        <li><a href="/{{ request.LANGUAGE_CODE }}/dashboard/">Dashboard</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/billing/">Billing</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/domains/">Sites</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/support/">Support</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/accounts/logout/">Sign Out</a></li>
+>>>>>>> Internationalization of the site
     </ul>
 
 </nav><!-- end #footer-nav -->

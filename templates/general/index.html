@@ -1,13 +1,13 @@
 {% extends "general/base.html" %}
+{% load i18n %}
 
-{% block title %}Home - Hi-Cloud{% endblock %}
+{% block title %}Home - AntiDDoS{% endblock %}
 {% block home_li %}class="current"{% endblock %}
 
 {% block content %}
 <section id="content" class="container clearfix">
 
-    <h2 class="slogan align-center">Give us five minutes and we'll supercharge your website.</h2>
-
+    <h2 class="slogan align-center">{% trans "Professional website protection. Security in THREE steps!" %}</h2>
     <section id="features-slider" class="ss-slider">
     
         <article class="slide">
@@ -16,14 +16,14 @@
             
             <div class="slide-button">
                 <span class="dropcap">1</span>
-                <h5>Register in system</h5>
-                <span class="description">Activation from email</span>
+                <h5>{% trans "Registration" %}</h5>
+                <span class="description">{% trans "of new member in the system" %}</span>
             </div>
         
             <div class="slide-content">
-                <h2>Register in system</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus justo.</p>
-                <p><a class="button" href="#">Read More</a></p>
+                <h2>{% trans "Registration" %}</h2>
+                <p>{% trans "All you need is to fulfill the registration form and to receive the activation code of your e-mail." %}</p>
+                <p><a class="button" href="#">{% trans "Details..." %}</a></p>
             </div>
             
         </article><!-- end .slide (Responsive Layout) -->
@@ -34,14 +34,14 @@
         
             <div class="slide-button">      
                 <span class="dropcap">2</span>
-                <h5>Enter site name</h5>
-                <span class="description">Which domain need's protection</span>
+                <h5>{% trans "Website connection" %}</h5>
+                <span class="description">{% trans "to add your resource in our security space" %}</span>
             </div>
             
             <div class="slide-content">
-                <h2>Enter site name</h2>
-                <p>Hendrerit eleifend condimentum quis, varius at lacus. Donec ultrices justo scelerisque erat feugiat sed mattis justo volutpat.</p>
-                <p><a class="button" href="#">Read More</a></p>
+                <h2>{% trans "Website connection" %}</h2>
+                <p>{% trans "There is no need to change your host server or internet provider while connecting your website, adding your website requires only a simple change to your domain’s DNS settings." %}</p>
+                <p><a class="button" href="#">{% trans "Details..." %}</a></p>
             </div>
             
         </article><!-- end .slide (HTML5 / CSS3) -->
@@ -52,14 +52,14 @@
         
             <div class="slide-button">
                 <span class="dropcap">3</span>
-                <h5>Tune options</h5>
-                <span class="description">What features are needing</span>
+                <h5>{% trans "Security activation" %}</h5>
+                <span class="description">{% trans "by selecting the appropriate functionality of protection" %}</span>
             </div>
             
             <div class="slide-content">
-                <h2>Choose plan table</h2>
-                <p>Etiam at nunc felis, vitae gravida libero. Morbi molestie elit eget metus volutpat vitae bibendum quam lacinia. Maecenas porttitor blandit nisl sit amet blandit. Phasellus porta sodales accumsan.</p>
-                <p><a class="button" href="#">Read More</a></p>
+                <h2>{% trans "Security activation" %}</h2>
+                <p>{% trans "Protective mechanisms can be chosen automatically with tariff plan, as well as most effective to your resource system parameters." %}</p>
+                <p><a class="button" href="#">{% trans "Details..." %}</a></p>
             </div>
             
         </article><!-- end .slide (Easily Customisable) -->
@@ -70,45 +70,45 @@
         
             <div class="slide-button">
                 <span class="dropcap">4</span>
-                <h5>Get SUPERCHARGED</h5>
-                <span class="description">After updating DNS records</span>
+                <h5>{% trans "Safe online" %}</h5>
+                <span class="description">{% trans "speeding and protection of website from network attacks!" %}</span>
             </div>
             
             <div class="slide-content">
-                <h2>Unique &amp; Clean</h2>
-                <p>Fusce porta elit quis nunc mollis ut lacinia eros accumsan. Aenean consequat egestas diam, vel pharetra tellus venenatis in.</p>
-                <p><a class="button" href="#">Read More</a></p>
+                <h2>{% trans "Safe online" %}</h2>
+                <p>{% trans "Protection of website and increase the download speed by using our globally distributed system of malicious traffic filtering" %}</p>
+                <p><a class="button" href="#">{% trans "Details..." %}</a></p>
             </div>
             
         </article><!-- end .slide (Unique & Clean) -->
         
     </section><!-- end #features-slider -->
 
-    <h6 class="section-title">Project's features</h6>
+    <h6 class="section-title">{% trans "Attack-ready tools of protection (Technology of protection from attacks)" %}</h6>
 
     <ul class="projects-carousel clearfix">
 
         <li>
             <a href="#">
                 <img src="/static/img/features/cdn.jpg" alt="">
-                <h5 class="title">AntiDDoS distributed network</h5>
-                <span class="categories">Your site will get mirror on over 50 nodes all over the world</span>
+                <h5 class="title">{% trans "Globally distributed network" %}</h5>
+                <span class="categories">{% trans "Our system is a globally distributed network of servers, which acts effectively to prevent the DdoS attacks" %}</span>
             </a>
         </li>
 
         <li>
             <a href="#">
                 <img src="/static/img/features/waf.jpg" alt="">
-                <h5 class="title">Web Application Firewall</h5>
-                <span class="categories">We are building individual security rules for each client</span>
+                <h5 class="title">{% trans "Network attacks Web-filter" %}</h5>
+                <span class="categories">{% trans "In order to prevent the hacking of website we use WAF with personal settings configuration capability" %}</span>
             </a>
         </li>
 
         <li>
             <a href="#">
                 <img src="/static/img/features/speed.jpg" alt="">
-                <h5 class="title">Speed optimizer</h5>
-                <span class="categories">Each node has a hi-speed communication channels and data compression algorythms</span>
+                <h5 class="title">{% trans "Website load speed up" %}</h5>
+                <span class="categories">{% trans "Due to data compression algorithms, web pages load speed increases to 70&#37;" %}</span>
             </a>
         </li>
 
@@ -116,16 +116,8 @@
         <li>
             <a href="#">
                 <img src="/static/img/features/7-24.jpg" alt="">
-                <h5 class="title">100% Uptime</h5>
-                <span class="categories">Your site will get mirror on over 50 nodes all over the world</span>
-            </a>
-        </li>
-
-        <li>
-            <a href="#">
-                <img src="/static/img/features/money.jpg" alt="">
-                <h5 class="title">Economy on hosting</h5>
-                <span class="categories">You do not need pay for powerfull dedicated server or expensive hosting</span>
+                <h5 class="title">{% trans "99.99&#37; online uptime" %}</h5>
+                <span class="categories">{% trans "HTML-version of your resource is available in major datacenters around the world simultaneously" %}</span>
             </a>
         </li>
 
