@@ -8,41 +8,141 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-12 14:34+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-05-21 01:01+0300\n"
+"PO-Revision-Date: 2013-05-21 01:00+0300\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Translated-Using: django-rosetta 0.7.1\n"
 
-#: .\features.html.py:12
+#: .\base.html.py:66
+msgid "Stay connected"
+msgstr "Мы на связи тут:"
+
+#: .\admin\edit_inline\stacked.html.py:9
+msgid "View on site"
+msgstr ""
+
+#: .\admin\edit_inline\stacked.html.py:67
+#, python-format
+msgid "Add another %(verbose_name)s"
+msgstr ""
+
+#: .\admin\edit_inline\stacked.html.py:70
+msgid "Remove"
+msgstr ""
+
+#: .\general\base.html.py:24
+msgid "All starts here"
+msgstr "Домашняя страница"
+
+#: .\general\base.html.py:24 .\general\base.html.py:64
+msgid "Home"
+msgstr "Главная"
+
+#: .\general\base.html.py:27
+msgid "What we offer"
+msgstr "Комплексной защиты"
+
+#: .\general\base.html.py:27 .\general\base.html.py:65
+msgid "Features"
+msgstr "Технологии"
+
+#: .\general\base.html.py:30
+msgid "What we charge"
+msgstr "Тарифные планы"
+
+#: .\general\base.html.py:30 .\general\base.html.py:66
+msgid "Pricing"
+msgstr "Тарифы"
+
+#: .\general\base.html.py:34
+msgid "Enter the system"
+msgstr "Личный кабинет"
+
+#: .\general\base.html.py:34 .\general\base.html.py:68
+msgid "Log In"
+msgstr "Вход"
+
+#: .\general\base.html.py:37
+msgid "Register"
+msgstr "Подключить защиту"
+
+#: .\general\base.html.py:37 .\general\base.html.py:69
+#: .\general\pricing-tables.html.py:65 .\general\pricing-tables.html.py:93
+#: .\general\pricing-tables.html.py:121 .\general\pricing-tables.html.py:149
+msgid "Sign Up"
+msgstr "Регистрация"
+
+#: .\general\base.html.py:47
+msgid "Profile"
+msgstr "Профайл"
+
+#: .\general\base.html.py:50
+msgid "Let me out"
+msgstr "Выпустите меня"
+
+#: .\general\base.html.py:50 .\general\base.html.py:76
+msgid "Sign Out"
+msgstr "Выход"
+
+#: .\general\contact-us.html.py:15
+msgid "We'd love to hear from you"
+msgstr "Наш саппорт всегда на связи"
+
+#: .\general\contact-us.html.py:26
+msgid "Contact Info"
+msgstr "Контактные данные"
+
+#: .\general\contact-us.html.py:28
+msgid "Phone"
+msgstr "Тел."
+
+#: .\general\contact-us.html.py:41
+msgid "Name"
+msgstr "Имя"
+
+#: .\general\contact-us.html.py:51
+msgid "Subject"
+msgstr "Тема"
+
+#: .\general\contact-us.html.py:56
+msgid "Your Message"
+msgstr "Текст сообщения"
+
+#: .\general\contact-us.html.py:65
+msgid "Submit"
+msgstr "Отправить"
+
+#: .\general\features.html.py:12
 msgid "Comprehensive security of websites"
 msgstr "Комплексная защита сайтов"
 
-#: .\features.html.py:21
+#: .\general\features.html.py:20
 msgid "We eliminate $1000 cost DDoS attack in 10 minutes"
 msgstr "Гасим DDoS атаку стоимостью $1000 за 10 минут"
 
-#: .\features.html.py:24
+#: .\general\features.html.py:23
 msgid "We increase website uptime to 99.99&#37;"
 msgstr "Подымаем время сайта в онлайн до 99.99&#37;"
 
-#: .\features.html.py:27
+#: .\general\features.html.py:26
 msgid "We increase web pages load speed to 70&#37;"
-msgstr "Ускоряем загрузку страниц до 70%"
+msgstr "Ускоряем загрузку страниц до 70&#37;"
 
-#: .\features.html.py:30
+#: .\general\features.html.py:29
 msgid ""
 "We protect websites from hacking attacks types: SQL&#92;XSS-injection, "
 "LFI&#92;RFI, CSRF and etc."
 msgstr ""
-"Защищаем сайты от взлома через атаки типа: SQL&#92;XSS-injection, LFI&#92;"
+"Защищаем сайты от взлома через атаки типа: QL&#92;XSS-injection, LFI&#92;"
 "RFI, CSRF и т.п."
 
-#: .\features.html.py:33
+#: .\general\features.html.py:32
 msgid ""
 "We cooperate with CERT’s, block bot-nets, maintain the &quot;blacklist&quot; "
 "of violators"
@@ -50,11 +150,11 @@ msgstr ""
 "Сотрудничаем с CERT'ами, блокируем бот-неты, ведем &quot;блэклист&quot; "
 "нарушителей..."
 
-#: .\features.html.py:39
+#: .\general\features.html.py:37
 msgid "Globally distributed network for neutralization of DDoS"
 msgstr "ГЕО-распределенная система борьбы с DDoS"
 
-#: .\features.html.py:44
+#: .\general\features.html.py:41
 msgid ""
 "Our system of elimination of DDoS and other network attacks – is globally "
 "distributed network of servers spread around the globe in order to achieve "
@@ -65,7 +165,7 @@ msgid ""
 "black list for all servers of distributed network simultaneously, which "
 "allows you to block heavy attacks on the denial of service."
 msgstr ""
-"Наша система борьбы с DDoS и другими сетевыми атаками - это распределенная "
+"Наша система борьбы с DDoS и другими сетевыми атаками - это рапределенная "
 "сеть множества серверов разнесенных географически для достижения "
 "максимальной скорости отдачи контента клиенту. Для непосредственной отдачи "
 "контента Web-сайта клиенту выбирается наименее нагруженный запросами сервер "
@@ -74,11 +174,11 @@ msgstr ""
 "попадают в черный список по всем серверам распределенной сети одновременно, "
 "что позволяет блокировать тяжелые атаки на отказ в обслуживании."
 
-#: .\features.html.py:48
+#: .\general\features.html.py:46
 msgid "Web-filter on network attacks"
 msgstr "Web-фильтр сетевых атак"
 
-#: .\features.html.py:53
+#: .\general\features.html.py:50
 msgid ""
 "In order to prevent the hacking of website we use WAF – is a firewall, which "
 "works on applied level and maintains the traffic filtering of Web "
@@ -87,16 +187,16 @@ msgid ""
 "SQL, XSS-injection, LFI&#92;RFI, CSRF, etc."
 msgstr ""
 "Для противодействия взлома сайта мы применяем WAF - межсетевой экран, "
-"работающий на прикладном уровне и осуществляющий фильтрацию трафика Web-"
+"работающий  на прикладном уровне и осуществляющий фильтрацию трафика Web-"
 "приложений. Данное решение не требует изменений в исходном коде Web-страниц "
 "и эффективно защищает Web-сайты от сетевых атак типа: SQL, XSS-инъекций, "
-"LFI&#92;RFI, CSRF и т.п."
+"LFI&#92;RFI, CSRF и т.п"
 
-#: .\features.html.py:57
+#: .\general\features.html.py:55
 msgid "Website upload speed increase"
 msgstr "Ускорение загрузки сайта"
 
-#: .\features.html.py:62
+#: .\general\features.html.py:59
 msgid ""
 "The upload speed of Web-page depends on the distance between the server and "
 "content user. Placement of content of one resource between several servers "
@@ -112,11 +212,11 @@ msgstr ""
 "оптимизирует скорость работы сайта для мобильных платформ. В среднем сжатие "
 "контента уменьшает размер HTTP-ответа на 70&#37;."
 
-#: .\features.html.py:66
+#: .\general\features.html.py:64
 msgid "99.99&#37; of uptime"
 msgstr "99.99&#37; времени в онлайн"
 
-#: .\features.html.py:71
+#: .\general\features.html.py:68
 msgid ""
 "It is important that your websites are available at any time of the day or "
 "night. Indeed, because of problems with your hosting provider, you can lose "
@@ -129,65 +229,66 @@ msgstr ""
 "из-за проблем у вашего хостинг-провайдера вы можете потерять некоторую часть "
 "своего дохода. Наша система позволяет иметь HTML-версию Вашего ресурса в "
 "нескольких десятках датацентров по всему миру одновременно, что сводит время "
-"недоступности сайта до минимума и позволяет не зависеть от хостинг или "
+"недоступности сайта до минимума и позволяет на зависить от хостинг или "
 "интернет провайдеров."
 
-#: .\features.html.py:76
+#: .\general\features.html.py:73
 msgid "Savings on tariffs of hosting provider"
-msgstr "Экономия на тарифах хостинг-провайдера"
+msgstr "Экономия на хостинге"
 
-#: .\features.html.py:81
+#: .\general\features.html.py:77
 msgid ""
 "Massive DDoS-attack drains quickly the amount of prepaid traffic in tariff "
 "of hosting provider. By connecting your site to a global distributed system, "
 "you save the amount of traffic and the hosting computer resources."
 msgstr ""
-"Массивная DDoS-атака очень быстро расходует количество предоплаченного "
+"Массивная ддос-атака очень быстро расходует количество предоплаченного "
 "трафика в тарифе хостинг-провайдера. Подключив ваш сайт к распределенной "
 "системе, вы экономите на объеме трафика и на вычислительных ресурсах "
 "хостинга."
 
-#: .\features.html.py:89
+#: .\general\features.html.py:85
 msgid "Have a question?"
 msgstr "Созрел вопрос?"
 
-#: .\features.html.py:92
+#: .\general\features.html.py:88
 msgid "Drop us a line"
 msgstr "Свяжитесь с нашими специалистами"
 
-#: .\index.html.py:10
+#: .\general\index.html.py:10
 msgid "Professional website protection. Security in THREE steps!"
 msgstr "Профессиональная защита сайта. Безопасность в ТРИ хода!"
 
-#: .\index.html.py:19 .\index.html.py:24
+#: .\general\index.html.py:20 .\general\index.html.py:25
 msgid "Registration"
 msgstr "Регистрация"
 
-#: .\index.html.py:20
+#: .\general\index.html.py:21
 msgid "of new member in the system"
 msgstr "нового пользователя в системе"
 
-#: .\index.html.py:25
+#: .\general\index.html.py:26
 msgid ""
 "All you need is to fulfill the registration form and to receive the "
 "activation code of your e-mail."
 msgstr ""
 "Все что нужно, это заполнить регистрационную форму и получить код активации "
-"по почте"
+"по почте."
 
-#: .\index.html.py:26 .\index.html.py:44 .\index.html.py:62 .\index.html.py:80
+#: .\general\index.html.py:27 .\general\index.html.py:45
+#: .\general\index.html.py:63 .\general\index.html.py:81
 msgid "Details..."
 msgstr "Подробнее..."
 
-#: .\index.html.py:37 .\index.html.py:42
+#: .\general\index.html.py:38 .\general\index.html.py:43
 msgid "Website connection"
 msgstr "Подключение сайта"
 
-#: .\index.html.py:38
+#: .\general\index.html.py:39
 msgid "to add your resource in our security space"
 msgstr "для включения ресурса в нашу систему защиты"
 
-#: .\index.html.py:43
+#: .\general\index.html.py:44
 msgid ""
 "There is no need to change your host server or internet provider while "
 "connecting your website, adding your website requires only a simple change "
@@ -197,86 +298,143 @@ msgstr ""
 "или провайдера, достаточно просто указать наши DNS сервера как основные для "
 "Вашего ресурса."
 
-#: .\index.html.py:55 .\index.html.py:60
+#: .\general\index.html.py:56 .\general\index.html.py:61
 msgid "Security activation"
 msgstr "Активация защиты"
 
-#: .\index.html.py:56
+#: .\general\index.html.py:57
 msgid "by selecting the appropriate functionality of protection"
 msgstr "путем выбора необходимого функционала безопасности"
 
-#: .\index.html.py:61
+#: .\general\index.html.py:62
 msgid ""
 "Protective mechanisms can be chosen automatically with tariff plan, as well "
 "as most effective to your resource system parameters."
 msgstr ""
 "Защитные механизмы можно выбирать как автоматически вместе с тарифным "
-"планом, так и наиболее эффективные по отношению к параметрам Вашего ресурса."
+"планом, так и наиболее эффектывные по отношению к параметрам Вашего ресурса."
 
-#: .\index.html.py:73 .\index.html.py:78
+#: .\general\index.html.py:74 .\general\index.html.py:79
 msgid "Safe online"
 msgstr "Безопасная работа"
 
-#: .\index.html.py:74
+#: .\general\index.html.py:75
 msgid "speeding and protection of website from network attacks!"
-msgstr "ускорение работы и защиты сайта от сетевых атак!"
+msgstr "ускорение работы и защита сайта от сетевых атак!"
 
-#: .\index.html.py:79
+#: .\general\index.html.py:80
 msgid ""
 "Protection of website and increase the download speed by using our globally "
 "distributed system of malicious traffic filtering"
 msgstr ""
 "Защита сайта и повышение скорости загрузки за счет нашей ГЕО-распределенной "
-"системы фильтрации зловредного трафика."
+"системы фильтраци зловредного трафика."
 
-#: .\index.html.py:87
+#: .\general\index.html.py:88
 msgid ""
 "Attack-ready tools of protection (Technology of protection from attacks)"
 msgstr "Технологии защиты от атак"
 
-#: .\index.html.py:94
+#: .\general\index.html.py:95
 msgid "Globally distributed network"
 msgstr "ГЕО-распределенная система"
 
-#: .\index.html.py:95
+#: .\general\index.html.py:96
 msgid ""
 "Our system is a globally distributed network of servers, which acts "
 "effectively to prevent the DdoS attacks"
 msgstr ""
-"Наша система борьбы с DDoS и другими сетевыми атаками – это распределенная "
+"Наша система борьбы с DDoS и другими сетевыми атаками - это рапределенная "
 "сеть серверов по всему миру"
 
-#: .\index.html.py:102
+#: .\general\index.html.py:103
 msgid "Network attacks Web-filter"
 msgstr "Web-фильтр сетевых атак"
 
-#: .\index.html.py:103
+#: .\general\index.html.py:104
 msgid ""
 "In order to prevent the hacking of website we use WAF with personal settings "
 "configuration capability"
 msgstr ""
-"Для противодействия взлома сайта мы применяем WAF с возможностью "
+"Для противодействию взлома сайта мы применяем WAF с возможностью "
 "персональной настройки"
 
-#: .\index.html.py:110
+#: .\general\index.html.py:111
 msgid "Website load speed up"
 msgstr "Ускорение загрузки сайта"
 
-#: .\index.html.py:111
+#: .\general\index.html.py:112
 msgid ""
 "Due to data compression algorithms, web pages load speed increases to 70&#37;"
 msgstr ""
-"Благодаря алгоритмам сжатия данных, скорость загрузки страниц сайта "
+"Благодаря алгоритмам сжатия данных скорость загрузки страниц сайта "
 "увеличивается до 70&#37;"
 
-#: .\index.html.py:119
+#: .\general\index.html.py:120
 msgid "99.99&#37; online uptime"
 msgstr "99.99&#37; времени в онлайн"
 
-#: .\index.html.py:120
+#: .\general\index.html.py:121
 msgid ""
 "HTML-version of your resource is available in major datacenters around the "
 "world simultaneously"
 msgstr ""
 "HTML-версия Вашего ресурса доступна в нескольких десятках датацентров по "
 "всему миру одновременно"
+
+#: .\general\pricing-tables.html.py:12
+msgid "Pricing tables"
+msgstr "Тарифные планы"
+
+#: .\general\pricing-tables.html.py:24
+msgid "Sites"
+msgstr "Количество сайтов"
+
+#: .\general\pricing-tables.html.py:25
+msgid "AntiDDoS support"
+msgstr "Защита от DDos атак"
+
+#: .\general\pricing-tables.html.py:26
+msgid "AntiProgs support"
+msgstr "Защита от взлома"
+
+#: .\general\pricing-tables.html.py:27
+msgid "Nodes in use"
+msgstr "Распределенные сервера"
+
+#: .\general\pricing-tables.html.py:28
+msgid "WAF"
+msgstr "Конфигурация Web-фильтра"
+
+#: .\general\pricing-tables.html.py:29
+msgid "Geoban support"
+msgstr "Блокировка по странам"
+
+#: .\general\pricing-tables.html.py:30
+msgid "IPban support"
+msgstr "Блокировка по IP"
+
+#: .\general\pricing-tables.html.py:31
+msgid "Whitelist support"
+msgstr "Белые списки IP адресов"
+
+#: .\general\pricing-tables.html.py:32
+msgid "Cache update time"
+msgstr "Время обновления html-кэша"
+
+#: .\general\pricing-tables.html.py:33
+msgid "Compression"
+msgstr "Компрессия трафика"
+
+#: .\general\pricing-tables.html.py:34
+msgid "Pictures"
+msgstr "Оптимизация изображений"
+
+#: .\general\pricing-tables.html.py:35
+msgid "Support"
+msgstr "Техподдержка"
+
+#: .\general\pricing-tables.html.py:46 .\general\pricing-tables.html.py:74
+#: .\general\pricing-tables.html.py:102 .\general\pricing-tables.html.py:130
+msgid "per month"
+msgstr "в месяц"

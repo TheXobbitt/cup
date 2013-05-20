@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% load localeurl_tags %}
 
 {% block header %}
 <header id="header" class="container clearfix">
 
-    <a href="/" id="logo">
-        <img src="/static/img/logo.png" alt="SmartStart">
+    <a href="/{{ request.LANGUAGE_CODE }}/" id="logo">
+        <img src="/static/img/logo.png" alt="AntiDDoS">
     </a>
 
     {% for lang in LANGUAGES %}

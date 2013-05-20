@@ -5,8 +5,8 @@
 {% block header %}
 <header id="header" class="container clearfix">
 
-    <a href="/" id="logo">
-        <img src="/static/img/logo.png" alt="SmartStart">
+    <a href="/{{ request.LANGUAGE_CODE }}/" id="logo">
+        <img src="/static/img/logo.png" alt="AntiDDoS">
     </a>
 
     {% for lang in LANGUAGES %}
@@ -21,20 +21,20 @@
         
         <ul>
             <li {% block home_li %}{% endblock %}>
-                <a href="/{{ request.LANGUAGE_CODE }}/" data-description="All starts here">Home</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/" data-description="{% trans "All starts here" %}">{% trans "Home" %}</a>
             </li>
             <li {% block features_li %}{% endblock %}>
-                <a href="/{{ request.LANGUAGE_CODE }}/features/" data-description="What we offer">Features</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/features/" data-description="{% trans "What we offer" %}">{% trans "Features" %}</a>
             </li>
             <li {% block pricing_li %}{% endblock %}>
-                <a href="/{{ request.LANGUAGE_CODE }}/pricing-tables/" data-description="What we charge">Pricing</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/pricing-tables/" data-description="{% trans "What we charge" %}">{% trans "Pricing" %}</a>
             </li>
             {% if not request.user.is_authenticated %}
             <li {% block login_li %}{% endblock %}>
-                <a href="/{{ request.LANGUAGE_CODE }}/accounts/login/" data-description="Enter the system">Log In</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/accounts/login/" data-description="{% trans "Enter the system" %}">{% trans "Log In" %}</a>
             </li>
             <li {% block signin_li %}{% endblock %}>
-                <a href="/{{ request.LANGUAGE_CODE }}/accounts/register/" data-description="Register">Sign Up</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/accounts/register/" data-description="{% trans "Register" %}">{% trans "Sign Up" %}</a>
             </li>
             {% endif %}
             {% if request.user.is_staff %}
@@ -44,10 +44,10 @@
             {% endif %}
             {% if request.user.is_authenticated %}
             <li>
-                <a href="/{{ request.LANGUAGE_CODE }}/dashboard/" data-description="Profile">{{ request.user }}</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/dashboard/" data-description="{% trans "Profile" %}">{{ request.user }}</a>
             </li>
             <li>
-                <a href="/{{ request.LANGUAGE_CODE }}/accounts/logout/" data-description="Let me out">Sign Out</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/accounts/logout/" data-description="{% trans "Let me out" %}">{% trans "Sign Out" %}</a>
             </li>
             {% endif %}
         </ul>
@@ -61,19 +61,19 @@
 <nav id="footer-nav" class="clearfix">
 
     <ul>
-        <li><a href="/{{ request.LANGUAGE_CODE }}/">Home</a></li>
-        <li><a href="/{{ request.LANGUAGE_CODE }}/features/">Features</a></li>
-        <li><a href="/{{ request.LANGUAGE_CODE }}/pricing-tables/">Pricing</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/">{% trans "Home" %}</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/features/">{% trans "Features" %}</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/pricing-tables/">{% trans "Pricing" %}</a></li>
         {% if not request.user.is_authenticated %}
-        <li><a href="/{{ request.LANGUAGE_CODE }}/accounts/login/">Log In</a></li>
-        <li><a href="/{{ request.LANGUAGE_CODE }}/accounts/register/">Sign Up</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/accounts/login/">{% trans "Log In" %}</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/accounts/register/">{% trans "Sign Up" %}</a></li>
         {% endif %}
         {% if request.user.is_staff %}
-        <li><a href="/stat/">Charts</a></li>
+        <li><a href="/stat/">Графики</a></li>
         {% endif %}
         {% if request.user.is_authenticated %}
         <li><a href="/{{ request.LANGUAGE_CODE }}/dashboard/">{{ request.user }}</a></li>
-        <li><a href="/{{ request.LANGUAGE_CODE }}/accounts/logout/">Sign Out</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/accounts/logout/">{% trans "Sign Out" %}</a></li>
         {% endif %}
     </ul>
 

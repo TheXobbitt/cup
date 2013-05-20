@@ -1,7 +1,7 @@
 {% extends "general/base.html" %}
 {% load i18n %}
 
-{% block title %}We are hiring - SmartStart{% endblock %}
+{% block title %}We are hiring - AntiDDoS{% endblock %}
 {% block features_li %}class="current"{% endblock %}
 
 {% block content %}
@@ -10,13 +10,12 @@
     <header class="page-header">
 
         <h1 class="page-title">{% trans "Comprehensive security of websites" %}</h1>
-        
+
     </header><!-- end .page-header -->
-    
+
     <div class="three-fourth">
 
         <div class="one-fourths">
-
             <ul class="arrow dotted">
                 <li><h4>{% trans "We eliminate $1000 cost DDoS attack in 10 minutes" %}</h4></li>
             </ul>
@@ -32,16 +31,15 @@
             <ul class="arrow dotted">
                 <li><h4>{% trans "We cooperate with CERT’s, block bot-nets, maintain the &quot;blacklist&quot; of violators" %}</h4></li>
             </ul>
-
         </div>
 
         <h4 class="acc-trigger">
-            <a href="#">{% trans "Globally distributed network for neutralization of DDoS" %}</a>
+            <a href="#1">{% trans "Globally distributed network for neutralization of DDoS" %}</a>
         </h4>
 
         <div class="acc-container">
-
-            <div class="content"><img src="/static/img/features/feat_cdn.png" alt="">{% trans "Our system of elimination of DDoS and other network attacks – is globally distributed network of servers spread around the globe in order to achieve the maximum upload speed of content to the client. For direct website content upload customer selects the least loaded server in the system. Requests from malicious sources (bot-nets) for the current server is blocked by special detector of anomalous traffic and identified hosts fall into the black list for all servers of distributed network simultaneously, which allows you to block heavy attacks on the denial of service." %}</div>
+            <div class="content"><p><img src="/static/img/features/feat_cdn.png" alt="">{% trans "Our system of elimination of DDoS and other network attacks – is globally distributed network of servers spread around the globe in order to achieve the maximum upload speed of content to the client. For direct website content upload customer selects the least loaded server in the system. Requests from malicious sources (bot-nets) for the current server is blocked by special detector of anomalous traffic and identified hosts fall into the black list for all servers of distributed network simultaneously, which allows you to block heavy attacks on the denial of service." %}
+            </div>
         </div>
 
         <h4 class="acc-trigger">
@@ -49,8 +47,8 @@
         </h4>
 
         <div class="acc-container">
-
-            <div class="content"><img src="/static/img/features/feat_waf.png" alt="">{% trans "In order to prevent the hacking of website we use WAF – is a firewall, which works on applied level and maintains the traffic filtering of Web applications. This solution does not require changes to the source code of Web-pages and effectively protects websites from network attacks such as: SQL, XSS-injection, LFI&#92;RFI, CSRF, etc." %}</div>
+            <div class="content"><p><img src="/static/img/features/feat_waf.jpg" alt="">{% trans "In order to prevent the hacking of website we use WAF – is a firewall, which works on applied level and maintains the traffic filtering of Web applications. This solution does not require changes to the source code of Web-pages and effectively protects websites from network attacks such as: SQL, XSS-injection, LFI&#92;RFI, CSRF, etc." %}
+            </div>
         </div>
 
         <h4 class="acc-trigger">
@@ -58,8 +56,8 @@
         </h4>
 
         <div class="acc-container">
-
-            <div class="content"><img src="/static/img/features/feat_speed.png" alt="">{% trans "The upload speed of Web-page depends on the distance between the server and content user. Placement of content of one resource between several servers distributed geographically makes the website upload speed much faster. Furthermore, the use of compression algorithms optimizes the speed of the content site for mobile platforms. The average content compression reduces the size of HTTP-response by 70&#37;." %}</div>
+            <div class="content"><p><img src="/static/img/features/feat_speed.png" alt="">{% trans "The upload speed of Web-page depends on the distance between the server and content user. Placement of content of one resource between several servers distributed geographically makes the website upload speed much faster. Furthermore, the use of compression algorithms optimizes the speed of the content site for mobile platforms. The average content compression reduces the size of HTTP-response by 70&#37;." %}
+            </div>
         </div>
 
         <h4 class="acc-trigger">
@@ -67,8 +65,7 @@
         </h4>
 
         <div class="acc-container">
-
-            <div class="content"><img src="/static/img/features/feat_uptime.png" alt="">{% trans "It is important that your websites are available at any time of the day or night. Indeed, because of problems with your hosting provider, you can lose some of your income. Our system allows you to have HTML-version of your site in dozens of datacenters across the world at the same time, which reduces the downtime to a minimum and the site allows you to be independent of the host or Internet service providers." %}</div>
+            <div class="content"><p><img src="/static/img/features/feat_uptime.png" alt="">{% trans "It is important that your websites are available at any time of the day or night. Indeed, because of problems with your hosting provider, you can lose some of your income. Our system allows you to have HTML-version of your site in dozens of datacenters across the world at the same time, which reduces the downtime to a minimum and the site allows you to be independent of the host or Internet service providers." %}</div>
         </div>
 
 
@@ -77,19 +74,18 @@
         </h4>
 
         <div class="acc-container">
-
-            <div class="content"><img src="/static/img/features/feat_money.png" alt="">{% trans "Massive DDoS-attack drains quickly the amount of prepaid traffic in tariff of hosting provider. By connecting your site to a global distributed system, you save the amount of traffic and the hosting computer resources." %}</div>
+            <div class="content"><p><img src="/static/img/features/feat_money.png" alt="">{% trans "Massive DDoS-attack drains quickly the amount of prepaid traffic in tariff of hosting provider. By connecting your site to a global distributed system, you save the amount of traffic and the hosting computer resources." %}
+            </div>
         </div>
-
 
     </div><!-- end .three-fourth -->
 
     <div class="one-fourth last">
 
-        <h4>{% trans "Have a question?" %}</h4>
+        <h3>{% trans "Have a question?" %}</h3>
 
         <h4>
-            <em><a href="/{{ request.LANGUAGE_CODE }}/contact-us/" class="button no-bg">{% trans "Drop us a line" %} <span class="arrow">&raquo;</span></a></em>
+            <em><a href="/{{ request.LANGUAGE_CODE }}/contact-us/" class="button no-bg">{% trans "Drop us a line" %} &nbsp; <span class="arrow">&raquo;</span></a></em>
         </h4>
         
     </div><!-- end .one-fourth.last -->

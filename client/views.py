@@ -42,6 +42,8 @@ def features(request):
     return render_to_response('general/features.html', locals(), context_instance = RequestContext(request))
 
 def pricing(request):
+    tariffs = Tariff.objects.all()
+
     return render_to_response('general/pricing-tables.html', locals(), context_instance = RequestContext(request))
 
 def elements(request):

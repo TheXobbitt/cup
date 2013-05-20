@@ -1,13 +1,14 @@
 {% extends "general/base.html" %}
 {% load i18n %}
 
-{% block title %}Home - AntiDDoS{% endblock %}
+{% block title %}Supercharge your site{% endblock %}
 {% block home_li %}class="current"{% endblock %}
 
 {% block content %}
 <section id="content" class="container clearfix">
 
     <h2 class="slogan align-center">{% trans "Professional website protection. Security in THREE steps!" %}</h2>
+
     <section id="features-slider" class="ss-slider">
     
         <article class="slide">
@@ -69,7 +70,7 @@
             <img src="/static/img/slider/features_img_4.jpg" alt="" class="slide-bg-image" />
         
             <div class="slide-button">
-                <span class="dropcap">4</span>
+                <span class="dropcap">&#8734;</span>
                 <h5>{% trans "Safe online" %}</h5>
                 <span class="description">{% trans "speeding and protection of website from network attacks!" %}</span>
             </div>
@@ -89,34 +90,34 @@
     <ul class="projects-carousel clearfix">
 
         <li>
-            <a href="#">
+            <a href="/features/">
                 <img src="/static/img/features/cdn.jpg" alt="">
-                <h5 class="title">{% trans "Globally distributed network" %}</h5>
+                <h5 class="title"><b>{% trans "Globally distributed network" %}</b></h5>
                 <span class="categories">{% trans "Our system is a globally distributed network of servers, which acts effectively to prevent the DdoS attacks" %}</span>
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="/features/">
                 <img src="/static/img/features/waf.jpg" alt="">
-                <h5 class="title">{% trans "Network attacks Web-filter" %}</h5>
+                <h5 class="title"><b>{% trans "Network attacks Web-filter" %}</b></h5>
                 <span class="categories">{% trans "In order to prevent the hacking of website we use WAF with personal settings configuration capability" %}</span>
             </a>
         </li>
 
         <li>
-            <a href="#">
+            <a href="/features/">
                 <img src="/static/img/features/speed.jpg" alt="">
-                <h5 class="title">{% trans "Website load speed up" %}</h5>
+                <h5 class="title"><b>{% trans "Website load speed up" %}</b></h5>
                 <span class="categories">{% trans "Due to data compression algorithms, web pages load speed increases to 70&#37;" %}</span>
             </a>
         </li>
 
 
         <li>
-            <a href="#">
+            <a href="/features/">
                 <img src="/static/img/features/7-24.jpg" alt="">
-                <h5 class="title">{% trans "99.99&#37; online uptime" %}</h5>
+                <h5 class="title"><b>{% trans "99.99&#37; online uptime" %}</b></h5>
                 <span class="categories">{% trans "HTML-version of your resource is available in major datacenters around the world simultaneously" %}</span>
             </a>
         </li>
