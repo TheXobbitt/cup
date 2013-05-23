@@ -33,7 +33,7 @@
             <li {% block login_li %}{% endblock %}>
                 <a href="/{{ request.LANGUAGE_CODE }}/accounts/login/" data-description="{% trans "Enter the system" %}">{% trans "Log In" %}</a>
             </li>
-            <li {% block signin_li %}{% endblock %}>
+            <li {% block signup_li %}{% endblock %}>
                 <a href="/{{ request.LANGUAGE_CODE }}/accounts/register/" data-description="{% trans "Register" %}">{% trans "Sign Up" %}</a>
             </li>
             {% endif %}

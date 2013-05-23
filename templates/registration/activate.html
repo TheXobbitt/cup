@@ -1,7 +1,17 @@
-{% extends "base.html" %}
+{% extends "general/base.html" %}
+{% load i18n %}
+
+{% block title %}Activation{% endblock %}
+{% block signup_li %}class="current"{% endblock %}
 {% block content %}
-<h1>Активация</h1>
-Ваша учетная запись не активирована.
-Ключ {{ activation_key }}
-<br/><br/>
+<section id="content" class="container clearfix">
+    <header class="page-header">
+
+        <h1 class="page-title">{% trans "Activation failed" %}</h1>
+
+    </header><!-- end .page-header -->
+
+    Ваша учетная запись не активирована.
+    Ключ {{ activation_key }}
+</section><!-- end #content -->
 {% endblock %}

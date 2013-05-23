@@ -24,7 +24,7 @@
             <div class="slide-content">
                 <h2>{% trans "Registration" %}</h2>
                 <p>{% trans "All you need is to fulfill the registration form and to receive the activation code of your e-mail." %}</p>
-                <p><a class="button" href="#">{% trans "Details..." %}</a></p>
+                <p><a class="button" href="/{{ request.LANGUAGE_CODE }}/features/">{% trans "Details..." %}</a></p>
             </div>
             
         </article><!-- end .slide (Responsive Layout) -->
@@ -42,7 +42,7 @@
             <div class="slide-content">
                 <h2>{% trans "Website connection" %}</h2>
                 <p>{% trans "There is no need to change your host server or internet provider while connecting your website, adding your website requires only a simple change to your domain’s DNS settings." %}</p>
-                <p><a class="button" href="#">{% trans "Details..." %}</a></p>
+                <p><a class="button" href="/{{ request.LANGUAGE_CODE }}/features/">{% trans "Details..." %}</a></p>
             </div>
             
         </article><!-- end .slide (HTML5 / CSS3) -->
@@ -60,7 +60,7 @@
             <div class="slide-content">
                 <h2>{% trans "Security activation" %}</h2>
                 <p>{% trans "Protective mechanisms can be chosen automatically with tariff plan, as well as most effective to your resource system parameters." %}</p>
-                <p><a class="button" href="#">{% trans "Details..." %}</a></p>
+                <p><a class="button" href="/{{ request.LANGUAGE_CODE }}/features/">{% trans "Details..." %}</a></p>
             </div>
             
         </article><!-- end .slide (Easily Customisable) -->
@@ -78,7 +78,7 @@
             <div class="slide-content">
                 <h2>{% trans "Safe online" %}</h2>
                 <p>{% trans "Protection of website and increase the download speed by using our globally distributed system of malicious traffic filtering" %}</p>
-                <p><a class="button" href="#">{% trans "Details..." %}</a></p>
+                <p><a class="button" href="/{{ request.LANGUAGE_CODE }}/features/">{% trans "Details..." %}</a></p>
             </div>
             
         </article><!-- end .slide (Unique & Clean) -->
@@ -90,7 +90,7 @@
     <ul class="projects-carousel clearfix">
 
         <li>
-            <a href="/features/">
+            <a href="/{{ request.LANGUAGE_CODE }}/features/">
                 <img src="/static/img/features/cdn.jpg" alt="">
                 <h5 class="title"><b>{% trans "Globally distributed network" %}</b></h5>
                 <span class="categories">{% trans "Our system is a globally distributed network of servers, which acts effectively to prevent the DdoS attacks" %}</span>
@@ -98,7 +98,7 @@
         </li>
 
         <li>
-            <a href="/features/">
+            <a href="/{{ request.LANGUAGE_CODE }}/features/">
                 <img src="/static/img/features/waf.jpg" alt="">
                 <h5 class="title"><b>{% trans "Network attacks Web-filter" %}</b></h5>
                 <span class="categories">{% trans "In order to prevent the hacking of website we use WAF with personal settings configuration capability" %}</span>
@@ -106,7 +106,7 @@
         </li>
 
         <li>
-            <a href="/features/">
+            <a href="/{{ request.LANGUAGE_CODE }}/features/">
                 <img src="/static/img/features/speed.jpg" alt="">
                 <h5 class="title"><b>{% trans "Website load speed up" %}</b></h5>
                 <span class="categories">{% trans "Due to data compression algorithms, web pages load speed increases to 70&#37;" %}</span>
@@ -115,7 +115,7 @@
 
 
         <li>
-            <a href="/features/">
+            <a href="/{{ request.LANGUAGE_CODE }}/features/">
                 <img src="/static/img/features/7-24.jpg" alt="">
                 <h5 class="title"><b>{% trans "99.99&#37; online uptime" %}</b></h5>
                 <span class="categories">{% trans "HTML-version of your resource is available in major datacenters around the world simultaneously" %}</span>

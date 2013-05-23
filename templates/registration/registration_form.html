@@ -1,12 +1,13 @@
 {% extends "general/base.html" %}
+{% load i18n %}
 
 {% block title %}Registration{% endblock %}
-{% block signin_li %}class="current"{% endblock %}
+{% block signup_li %}class="current"{% endblock %}
 {% block content %}
 <section id="content" class="container clearfix">
     <header class="page-header">
 
-        <h1 class="page-title">Sign Up</h1>
+        <h1 class="page-title">{% trans "Sign Up" %}</h1>
 
     </header><!-- end .page-header -->
 <form method="post" action="">{% csrf_token %}
@@ -19,7 +20,7 @@
     </dd>
 {% endfor %}
 </dl>
-<input type="submit" value="Sign Up" / class="clearfix">
+<input type="submit" value="{% trans "Sign Up" %}"/ class="clearfix">
 </form>
 </section><!-- end #content -->
 {% endblock %}

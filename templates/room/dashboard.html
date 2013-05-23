@@ -1,4 +1,5 @@
 {% extends "room/base.html" %}
+{% load i18n %}
 
 {% block head %}
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -52,26 +53,26 @@
 
     <header class="page-header">
 
-        <h1 class="page-title">Management and Monitoring</h1>
+        <h1 class="page-title">{% trans "Management and Monitoring" %}</h1>
 
     </header><!-- end .page-header -->
-<p><a href="/{{ request.LANGUAGE_CODE }}/add/" class="button">+ Add new site</a> &nbsp &nbsp &nbsp Add new site to protect from ddos and others malicious attacks</p>
+<p><a href="/{{ request.LANGUAGE_CODE }}/add/" class="button">+ {% trans "Add new site" %}</a> &nbsp;&nbsp;&nbsp; {% trans "Add new site to protect from ddos and others malicious attacks" %}</p>
     <div class="three-fourth">
       {% for domain in domains %}
       <h4 class="acc-trigger"> <a href="#">{{ domain }}</a></h4>
        <div  class="acc-container">
           <ul class="tabs-nav">
             <li class="active">
-                <a href="#tab1">Monitoring</a>
+                <a href="#tab1">{% trans "Monitoring" %}</a>
             </li>
             <li>
-                <a href="#tab2">BlackList</a>
+                <a href="#tab2">{% trans "BlackList" %}</a>
             </li>
             <li>
-                <a href="#tab3">WhiteList</a>
+                <a href="#tab3">{% trans "WhiteList" %}</a>
             </li>
             <li>
-                <a href="#tab4">DNS Records</a>
+                <a href="#tab4">{% trans "DNS Records" %}</a>
             </li>
 
         </ul>
@@ -84,11 +85,11 @@
             <div class="tab-content" id="tab2" style="display: none; ">
                 <form id="blacklist">
                     <p class="textarea-block">
-                        <label><strong>Search IP in BlackList</strong></label>
+                        <label><strong>{% trans "Search IP in BlackList" %}</strong></label>
                         <input id="black_ip" value="">
                     </p>
                     <p id="black_ip_text" style="display: none">
-                        This IP is in black list
+                        {% trans "This IP is in black list" %}
                     </p>
                 </form>
                 <div class="clear"></div>
@@ -96,7 +97,7 @@
 
             <div class="tab-content" id="tab3" style="display: none; ">
                 <p class="textarea-block">
-                    <label><strong>Add IPs to WhiteList</strong> (separate by coma)</label>
+                    <label><strong>{% trans "Add IPs to WhiteList" %}</strong> ({% trans "separate by coma" %})</label>
                     <textarea name="message" id="contact-message" cols="88" rows="3" required></textarea>
                 </p>
                 <input type="submit" value="Add">
@@ -105,7 +106,7 @@
             </div><!-- end #tab3 -->
 
             <div class="tab-content" id="tab4" style="display: block; ">
-                <p>Show current site's DNS records:</p>
+                <p>{% trans "Show current site's DNS records" %}:</p>
                 ns.lee01-xoprotect.in
             </div><!-- end #tab4 -->
 
@@ -117,12 +118,12 @@
 
     <div class="one-fourth last">
 
-        <h4>Have a question?</h4>
+        <h4>{% trans "Have a question?" %}</h4>
 
-        <p>Not a problem! Contact us to let us know how you can help you.</p>
+        <p>{% trans "Not a problem! Contact us to let us know how you can help you." %}</p>
 
         <h4>
-            <em><a href="/{{ request.LANGUAGE_CODE }}/support/" class="button no-bg">Drop us a line <span class="arrow">&raquo;</span></a></em>
+            <em><a href="/{{ request.LANGUAGE_CODE }}/support/" class="button no-bg">{% trans "Drop us a line" %} <span class="arrow">&raquo;</span></a></em>
         </h4>
         
     </div><!-- end .one-fourth.last -->

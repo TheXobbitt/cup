@@ -1,4 +1,5 @@
 {% extends "room/base.html" %}
+{% load i18n %}
 
 {% block title %}Change tariff plan{% endblock %}
 
@@ -6,17 +7,17 @@
 <section id="content" class="container clearfix">
     <header class="page-header">
 
-        <h1 class="page-title">Change tariff plan</h1>
+        <h1 class="page-title">{% trans "Change tariff plan" %}</h1>
 
     </header><!-- end .page-header -->
 <form method="post" action="">{% csrf_token %}
 <dl>
-<dt>Change your tariff</dt>
+<dt>{% trans "Change your tariff" %}</dt>
 <dd class="clearfix"><select name="tariff">
 {% for tariff in tariffs %}<option value="{{ tariff }}">{{ tariff }}</option>{% endfor %}
 </select>
 </dl>
-<input type="submit" value="Change" / class="clearfix">
+<input type="submit" value="{% trans "Change" %}"/ class="clearfix">
 </form>
 </section><!-- end #content -->
 {% endblock %}

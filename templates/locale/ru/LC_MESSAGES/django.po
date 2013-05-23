@@ -2,21 +2,20 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-21 01:01+0300\n"
-"PO-Revision-Date: 2013-05-21 01:00+0300\n"
+"POT-Creation-Date: 2013-05-24 00:44+0300\n"
+"PO-Revision-Date: 2013-05-24 00:45+0300\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "X-Translated-Using: django-rosetta 0.7.1\n"
 
 #: .\base.html.py:66
@@ -25,7 +24,7 @@ msgstr "Мы на связи тут:"
 
 #: .\admin\edit_inline\stacked.html.py:9
 msgid "View on site"
-msgstr ""
+msgstr "Посмотреть на сайте"
 
 #: .\admin\edit_inline\stacked.html.py:67
 #, python-format
@@ -34,7 +33,7 @@ msgstr ""
 
 #: .\admin\edit_inline\stacked.html.py:70
 msgid "Remove"
-msgstr ""
+msgstr "Удалить"
 
 #: .\general\base.html.py:24
 msgid "All starts here"
@@ -48,7 +47,8 @@ msgstr "Главная"
 msgid "What we offer"
 msgstr "Комплексной защиты"
 
-#: .\general\base.html.py:27 .\general\base.html.py:65
+#: .\general\base.html.py:27 .\general\base.html.py:65 .\room\base.html.py:30
+#: .\room\base.html.py:53 .\room\domains.html.py:78
 msgid "Features"
 msgstr "Технологии"
 
@@ -73,8 +73,8 @@ msgid "Register"
 msgstr "Подключить защиту"
 
 #: .\general\base.html.py:37 .\general\base.html.py:69
-#: .\general\pricing-tables.html.py:65 .\general\pricing-tables.html.py:93
-#: .\general\pricing-tables.html.py:121 .\general\pricing-tables.html.py:149
+#: .\registration\login.html.py:43 .\registration\registration_form.html.py:10
+#: .\registration\registration_form.html.py:23
 msgid "Sign Up"
 msgstr "Регистрация"
 
@@ -82,39 +82,40 @@ msgstr "Регистрация"
 msgid "Profile"
 msgstr "Профайл"
 
-#: .\general\base.html.py:50
+#: .\general\base.html.py:50 .\room\base.html.py:37
 msgid "Let me out"
 msgstr "Выпустите меня"
 
-#: .\general\base.html.py:50 .\general\base.html.py:76
+#: .\general\base.html.py:50 .\general\base.html.py:76 .\room\base.html.py:37
+#: .\room\base.html.py:55
 msgid "Sign Out"
 msgstr "Выход"
 
-#: .\general\contact-us.html.py:15
+#: .\general\contact-us.html.py:14
 msgid "We'd love to hear from you"
 msgstr "Наш саппорт всегда на связи"
 
-#: .\general\contact-us.html.py:26
+#: .\general\contact-us.html.py:25 .\room\support.html.py:25
 msgid "Contact Info"
 msgstr "Контактные данные"
 
-#: .\general\contact-us.html.py:28
+#: .\general\contact-us.html.py:27 .\room\support.html.py:27
 msgid "Phone"
 msgstr "Тел."
 
-#: .\general\contact-us.html.py:41
+#: .\general\contact-us.html.py:38 .\room\support.html.py:38
 msgid "Name"
 msgstr "Имя"
 
-#: .\general\contact-us.html.py:51
+#: .\general\contact-us.html.py:48 .\room\support.html.py:48
 msgid "Subject"
 msgstr "Тема"
 
-#: .\general\contact-us.html.py:56
+#: .\general\contact-us.html.py:53 .\room\support.html.py:53
 msgid "Your Message"
 msgstr "Текст сообщения"
 
-#: .\general\contact-us.html.py:65
+#: .\general\contact-us.html.py:62 .\room\support.html.py:62
 msgid "Submit"
 msgstr "Отправить"
 
@@ -139,13 +140,13 @@ msgid ""
 "We protect websites from hacking attacks types: SQL&#92;XSS-injection, "
 "LFI&#92;RFI, CSRF and etc."
 msgstr ""
-"Защищаем сайты от взлома через атаки типа: QL&#92;XSS-injection, LFI&#92;"
-"RFI, CSRF и т.п."
+"Защищаем сайты от взлома через атаки типа: QL&#92;XSS-injection, "
+"LFI&#92;RFI, CSRF и т.п."
 
 #: .\general\features.html.py:32
 msgid ""
-"We cooperate with CERT’s, block bot-nets, maintain the &quot;blacklist&quot; "
-"of violators"
+"We cooperate with CERT’s, block bot-nets, maintain the &quot;blacklist&quot;"
+" of violators"
 msgstr ""
 "Сотрудничаем с CERT'ами, блокируем бот-неты, ведем &quot;блэклист&quot; "
 "нарушителей..."
@@ -160,9 +161,9 @@ msgid ""
 "distributed network of servers spread around the globe in order to achieve "
 "the maximum upload speed of content to the client. For direct website "
 "content upload customer selects the least loaded server in the system. "
-"Requests from malicious sources (bot-nets) for the current server is blocked "
-"by special detector of anomalous traffic and identified hosts fall into the "
-"black list for all servers of distributed network simultaneously, which "
+"Requests from malicious sources (bot-nets) for the current server is blocked"
+" by special detector of anomalous traffic and identified hosts fall into the"
+" black list for all servers of distributed network simultaneously, which "
 "allows you to block heavy attacks on the denial of service."
 msgstr ""
 "Наша система борьбы с DDoS и другими сетевыми атаками - это рапределенная "
@@ -180,8 +181,8 @@ msgstr "Web-фильтр сетевых атак"
 
 #: .\general\features.html.py:50
 msgid ""
-"In order to prevent the hacking of website we use WAF – is a firewall, which "
-"works on applied level and maintains the traffic filtering of Web "
+"In order to prevent the hacking of website we use WAF – is a firewall, which"
+" works on applied level and maintains the traffic filtering of Web "
 "applications. This solution does not require changes to the source code of "
 "Web-pages and effectively protects websites from network attacks such as: "
 "SQL, XSS-injection, LFI&#92;RFI, CSRF, etc."
@@ -206,8 +207,8 @@ msgid ""
 "the size of HTTP-response by 70&#37;."
 msgstr ""
 "На скорость загрузки Web-страницы сильно влияет насколько далеко "
-"пользователь находится от вашего сервера. Размещение контента одного ресурса "
-"между несколькими серверами, разнесенными географически, делает загрузку "
+"пользователь находится от вашего сервера. Размещение контента одного ресурса"
+" между несколькими серверами, разнесенными географически, делает загрузку "
 "сайта быстрее. Кроме того, применение алгоритмов сжатия контента "
 "оптимизирует скорость работы сайта для мобильных платформ. В среднем сжатие "
 "контента уменьшает размер HTTP-ответа на 70&#37;."
@@ -220,16 +221,16 @@ msgstr "99.99&#37; времени в онлайн"
 msgid ""
 "It is important that your websites are available at any time of the day or "
 "night. Indeed, because of problems with your hosting provider, you can lose "
-"some of your income. Our system allows you to have HTML-version of your site "
-"in dozens of datacenters across the world at the same time, which reduces "
+"some of your income. Our system allows you to have HTML-version of your site"
+" in dozens of datacenters across the world at the same time, which reduces "
 "the downtime to a minimum and the site allows you to be independent of the "
 "host or Internet service providers."
 msgstr ""
 "Очень важно, чтобы ваши сайты были доступны в любое время дня и ночи. Ведь "
-"из-за проблем у вашего хостинг-провайдера вы можете потерять некоторую часть "
-"своего дохода. Наша система позволяет иметь HTML-версию Вашего ресурса в "
-"нескольких десятках датацентров по всему миру одновременно, что сводит время "
-"недоступности сайта до минимума и позволяет на зависить от хостинг или "
+"из-за проблем у вашего хостинг-провайдера вы можете потерять некоторую часть"
+" своего дохода. Наша система позволяет иметь HTML-версию Вашего ресурса в "
+"нескольких десятках датацентров по всему миру одновременно, что сводит время"
+" недоступности сайта до минимума и позволяет на зависить от хостинг или "
 "интернет провайдеров."
 
 #: .\general\features.html.py:73
@@ -239,19 +240,21 @@ msgstr "Экономия на хостинге"
 #: .\general\features.html.py:77
 msgid ""
 "Massive DDoS-attack drains quickly the amount of prepaid traffic in tariff "
-"of hosting provider. By connecting your site to a global distributed system, "
-"you save the amount of traffic and the hosting computer resources."
+"of hosting provider. By connecting your site to a global distributed system,"
+" you save the amount of traffic and the hosting computer resources."
 msgstr ""
 "Массивная ддос-атака очень быстро расходует количество предоплаченного "
 "трафика в тарифе хостинг-провайдера. Подключив ваш сайт к распределенной "
 "системе, вы экономите на объеме трафика и на вычислительных ресурсах "
 "хостинга."
 
-#: .\general\features.html.py:85
+#: .\general\features.html.py:85 .\room\billing.html.py:91
+#: .\room\dashboard.html.py:121
 msgid "Have a question?"
 msgstr "Созрел вопрос?"
 
-#: .\general\features.html.py:88
+#: .\general\features.html.py:88 .\room\billing.html.py:96
+#: .\room\dashboard.html.py:126
 msgid "Drop us a line"
 msgstr "Свяжитесь с нашими специалистами"
 
@@ -353,8 +356,8 @@ msgstr "Web-фильтр сетевых атак"
 
 #: .\general\index.html.py:104
 msgid ""
-"In order to prevent the hacking of website we use WAF with personal settings "
-"configuration capability"
+"In order to prevent the hacking of website we use WAF with personal settings"
+" configuration capability"
 msgstr ""
 "Для противодействию взлома сайта мы применяем WAF с возможностью "
 "персональной настройки"
@@ -365,7 +368,8 @@ msgstr "Ускорение загрузки сайта"
 
 #: .\general\index.html.py:112
 msgid ""
-"Due to data compression algorithms, web pages load speed increases to 70&#37;"
+"Due to data compression algorithms, web pages load speed increases to "
+"70&#37;"
 msgstr ""
 "Благодаря алгоритмам сжатия данных скорость загрузки страниц сайта "
 "увеличивается до 70&#37;"
@@ -386,55 +390,212 @@ msgstr ""
 msgid "Pricing tables"
 msgstr "Тарифные планы"
 
-#: .\general\pricing-tables.html.py:24
+#: .\general\pricing-tables.html.py:23 .\room\domains.html.py:32
 msgid "Sites"
 msgstr "Количество сайтов"
 
-#: .\general\pricing-tables.html.py:25
+#: .\general\pricing-tables.html.py:24 .\room\domains.html.py:33
 msgid "AntiDDoS support"
 msgstr "Защита от DDos атак"
 
-#: .\general\pricing-tables.html.py:26
+#: .\general\pricing-tables.html.py:25 .\room\domains.html.py:34
 msgid "AntiProgs support"
 msgstr "Защита от взлома"
 
-#: .\general\pricing-tables.html.py:27
+#: .\general\pricing-tables.html.py:26 .\room\domains.html.py:35
 msgid "Nodes in use"
 msgstr "Распределенные сервера"
 
-#: .\general\pricing-tables.html.py:28
+#: .\general\pricing-tables.html.py:27 .\room\domains.html.py:36
 msgid "WAF"
 msgstr "Конфигурация Web-фильтра"
 
-#: .\general\pricing-tables.html.py:29
+#: .\general\pricing-tables.html.py:28 .\room\domains.html.py:37
 msgid "Geoban support"
 msgstr "Блокировка по странам"
 
-#: .\general\pricing-tables.html.py:30
+#: .\general\pricing-tables.html.py:29 .\room\domains.html.py:38
 msgid "IPban support"
 msgstr "Блокировка по IP"
 
-#: .\general\pricing-tables.html.py:31
+#: .\general\pricing-tables.html.py:30 .\room\domains.html.py:39
 msgid "Whitelist support"
 msgstr "Белые списки IP адресов"
 
-#: .\general\pricing-tables.html.py:32
+#: .\general\pricing-tables.html.py:31 .\room\domains.html.py:40
 msgid "Cache update time"
 msgstr "Время обновления html-кэша"
 
-#: .\general\pricing-tables.html.py:33
+#: .\general\pricing-tables.html.py:32 .\room\domains.html.py:41
 msgid "Compression"
 msgstr "Компрессия трафика"
 
-#: .\general\pricing-tables.html.py:34
+#: .\general\pricing-tables.html.py:33 .\room\domains.html.py:42
 msgid "Pictures"
 msgstr "Оптимизация изображений"
 
-#: .\general\pricing-tables.html.py:35
+#: .\general\pricing-tables.html.py:34 .\room\base.html.py:33
+#: .\room\base.html.py:54 .\room\domains.html.py:43
 msgid "Support"
 msgstr "Техподдержка"
 
-#: .\general\pricing-tables.html.py:46 .\general\pricing-tables.html.py:74
-#: .\general\pricing-tables.html.py:102 .\general\pricing-tables.html.py:130
+#: .\general\pricing-tables.html.py:50 .\room\domains.html.py:79
 msgid "per month"
 msgstr "в месяц"
+
+#: .\general\pricing-tables.html.py:71 .\room\change_tariff.html.py:20
+msgid "Change"
+msgstr "Сменить"
+
+#: .\registration\activate.html.py:10
+msgid "Activation failed"
+msgstr "Активация не выполнена"
+
+#: .\registration\activation_complete.html.py:10
+msgid "Activation complete"
+msgstr "Активация выполнена"
+
+#: .\registration\login.html.py:10 .\registration\login.html.py:32
+msgid "Sign In"
+msgstr "Вход"
+
+#: .\registration\login.html.py:42
+msgid "Forgot your password?"
+msgstr "Забыли свой пароль?"
+
+#: .\registration\registration_complete.html.py:10
+msgid "Registration complete"
+msgstr "Регистрация выполнена"
+
+#: .\room\add_new_site.html.py:10 .\room\add_new_site.html.py:18
+#: .\room\dashboard.html.py:59 .\room\domains.html.py:17
+msgid "Add new site"
+msgstr "Добавить новый сайт"
+
+#: .\room\add_new_site.html.py:15
+msgid "Site name"
+msgstr "Название сайта"
+
+#: .\room\base.html.py:24
+msgid "Site monitoring"
+msgstr "Мониторинг сайта"
+
+#: .\room\base.html.py:24 .\room\base.html.py:51
+msgid "Dashboard"
+msgstr "Панель"
+
+#: .\room\base.html.py:27
+msgid "Orders and payments"
+msgstr "Заказы и оплата"
+
+#: .\room\base.html.py:27 .\room\base.html.py:52
+msgid "Billing"
+msgstr "Биллинг"
+
+#: .\room\base.html.py:30
+msgid "Plans and services"
+msgstr "Планы и сервисы"
+
+#: .\room\base.html.py:33
+msgid "Ticket system"
+msgstr "Система тикетов"
+
+#: .\room\billing.html.py:12
+msgid "Current orders"
+msgstr "Текущие заказы"
+
+#: .\room\billing.html.py:43
+msgid "Pay orders"
+msgstr "Оплатить счета"
+
+#: .\room\billing.html.py:48
+msgid "Payments history"
+msgstr "История транзакций"
+
+#: .\room\billing.html.py:49
+msgid "Last 5 payments"
+msgstr "Последние 5 транзакций"
+
+#: .\room\billing.html.py:83 .\room\domains.html.py:103
+msgid "Update balance"
+msgstr "Пополнить баланс"
+
+#: .\room\billing.html.py:93 .\room\dashboard.html.py:123
+msgid "Not a problem! Contact us to let us know how you can help you."
+msgstr "Не проблема! Свяжитесь с нами, что бы мы знали как помочь вам."
+
+#: .\room\change_tariff.html.py:10
+msgid "Change tariff plan"
+msgstr "Сменить тарифный план"
+
+#: .\room\change_tariff.html.py:15
+msgid "Change your tariff"
+msgstr "Измените свой тариф"
+
+#: .\room\dashboard.html.py:56
+msgid "Management and Monitoring"
+msgstr "Управление и мониторинг"
+
+#: .\room\dashboard.html.py:59 .\room\domains.html.py:17
+msgid "Add new site to protect from ddos and others malicious attacks"
+msgstr "Добавить новый сайт для защиты от ДДоС и других видов атак"
+
+#: .\room\dashboard.html.py:66
+msgid "Monitoring"
+msgstr "Мониторинг"
+
+#: .\room\dashboard.html.py:69
+msgid "BlackList"
+msgstr "Черный список"
+
+#: .\room\dashboard.html.py:72
+msgid "WhiteList"
+msgstr "Белые списки"
+
+#: .\room\dashboard.html.py:75
+msgid "DNS Records"
+msgstr "DNS записи"
+
+#: .\room\dashboard.html.py:88
+msgid "Search IP in BlackList"
+msgstr "Поиск IP в черном списке"
+
+#: .\room\dashboard.html.py:92
+msgid "This IP is in black list"
+msgstr "Этот IP в черном списке"
+
+#: .\room\dashboard.html.py:100
+msgid "Add IPs to WhiteList"
+msgstr "Добавить IP в белый список"
+
+#: .\room\dashboard.html.py:100
+msgid "separate by coma"
+msgstr "разделены комой"
+
+#: .\room\dashboard.html.py:109
+msgid "Show current site's DNS records"
+msgstr "Показать текущие DNS записи"
+
+#: .\room\domains.html.py:12
+msgid "Plans and Services"
+msgstr "Планы и сервисы"
+
+#: .\room\domains.html.py:27
+msgid "Expiration date"
+msgstr "Срок истекает"
+
+#: .\room\domains.html.py:52
+msgid "Current Plan"
+msgstr "Текущий план"
+
+#: .\room\domains.html.py:100
+msgid "View Dashboard"
+msgstr "Посмотреть панель"
+
+#: .\room\domains.html.py:106
+msgid "Add features"
+msgstr "Добавить возможности"
+
+#: .\room\support.html.py:14
+msgid "We'd solve any problem"
+msgstr "Мы решим любую проблему"

@@ -21,20 +21,20 @@
         
         <ul>
             <li {% block dashboard_li %}{% endblock %}>
-                <a href="/{{ request.LANGUAGE_CODE }}/dashboard/" data-description="Site monitoring">Dashboard</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/dashboard/" data-description="{% trans "Site monitoring" %}">{% trans "Dashboard" %}</a>
             </li>
             <li {% block billing_li %}{% endblock %}>
-                <a href="/{{ request.LANGUAGE_CODE }}/billing/" data-description="Orders and payments">Billing</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/billing/" data-description="{% trans "Orders and payments" %}">{% trans "Billing" %}</a>
             </li>
             <li {% block domains_li %}{% endblock %}>
-                <a href="/{{ request.LANGUAGE_CODE }}/domains/" data-description="Plans and services">Features</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/domains/" data-description="{% trans "Plans and services" %}">{% trans "Features" %}</a>
             </li>
             <li {% block support_li %}{% endblock %}>
-                <a href="/{{ request.LANGUAGE_CODE }}/support/" data-description="Ticket system">Support</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/support/" data-description="{% trans "Ticket system" %}">{% trans "Support" %}</a>
 
             </li>
             <li>
-                <a href="/{{ request.LANGUAGE_CODE }}/accounts/logout/" data-description="Let me out">Sign Out</a>
+                <a href="/{{ request.LANGUAGE_CODE }}/accounts/logout/" data-description="{% trans "Let me out" %}">{% trans "Sign Out" %}</a>
             </li>
         </ul>
 
@@ -48,11 +48,11 @@
 <nav id="footer-nav" class="clearfix">
 
     <ul>
-        <li><a href="/{{ request.LANGUAGE_CODE }}/dashboard/">Dashboard</a></li>
-        <li><a href="/{{ request.LANGUAGE_CODE }}/billing/">Billing</a></li>
-        <li><a href="/{{ request.LANGUAGE_CODE }}/domains/">Features</a></li>
-        <li><a href="/{{ request.LANGUAGE_CODE }}/support/">Support</a></li>
-        <li><a href="/{{ request.LANGUAGE_CODE }}/accounts/logout/">Sign Out</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/dashboard/">{% trans "Dashboard" %}</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/billing/">{% trans "Billing" %}</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/domains/">{% trans "Features" %}</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/support/">{% trans "Support" %}</a></li>
+        <li><a href="/{{ request.LANGUAGE_CODE }}/accounts/logout/">{% trans "Sign Out" %}</a></li>
     </ul>
 
 </nav><!-- end #footer-nav -->

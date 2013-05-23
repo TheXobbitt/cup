@@ -1,4 +1,5 @@
 {% extends "room/base.html" %}
+{% load i18n %}
 
 {% block title %}Antiddos Plans{% endblock %}
 {% block domains_li %}class="current"{% endblock %}
@@ -8,12 +9,12 @@
 
     <header class="page-header">
 
-        <h1 class="page-title">Plans and Services</h1>
+        <h1 class="page-title">{% trans "Plans and Services" %}</h1>
 
     </header><!-- end .page-header -->
     
     <div class="-fourth">
-        <p><a href="/{{ request.LANGUAGE_CODE }}/add/" class="button">+ Add new site</a> &nbsp; &nbsp; &nbsp; Add new site to protect from ddos and others malicious attacks</p>
+        <p><a href="/{{ request.LANGUAGE_CODE }}/add/" class="button">+ {% trans "Add new site" %}</a> &nbsp;&nbsp;&nbsp; {% trans "Add new site to protect from ddos and others malicious attacks" %}</p>
         <h4 class="acc-trigger">
         </h4>
        <div class="acc-container"><br>
@@ -23,23 +24,23 @@
         <div class="column free">
 
             <div class="header">
-                <h2 class="title">Expiration date</h2>
+                <h2 class="title">{% trans "Expiration date" %}</h2>
                 <h3 class="price"><span>24 june</span>2013</h3>
             </div><!-- end .header -->
 
             <ul class="features clearfix">
-                <li>Sites</li>
-                <li>AntiDDoS support</li>
-                <li>AntiProgs support</li>
-                <li>Nodes in use</li>
-                <li>WAF</li>
-                <li>Geoban support</li>
-                <li>IPban support</li>
-                <li>Whitelist support</li>
-                <li>Cache update time</li>
-                <li>Compression</li>
-                <li>Pictures</li>
-                <li>Support</li>
+                <li>{% trans "Sites" %}</li>
+                <li>{% trans "AntiDDoS support" %}</li>
+                <li>{% trans "AntiProgs support" %}</li>
+                <li>{% trans "Nodes in use" %}</li>
+                <li>{% trans "WAF" %}</li>
+                <li>{% trans "Geoban support" %}</li>
+                <li>{% trans "IPban support" %}</li>
+                <li>{% trans "Whitelist support" %}</li>
+                <li>{% trans "Cache update time" %}</li>
+                <li>{% trans "Compression" %}</li>
+                <li>{% trans "Pictures" %}</li>
+                <li>{% trans "Support" %}</li>
             </ul><!-- end .features -->
 
         </div><!-- end .column.free -->
@@ -48,7 +49,7 @@
         <div class="column featured">
 
             <div class="header">
-                <h2 class="title">Current Plan</h2>
+                <h2 class="title">{% trans "Current Plan" %}</h2>
                 <h3 class="price"><span>"{{ tariff_name }}"</span></h3>
             </div><!-- end .header -->
 
@@ -74,8 +75,8 @@
         <div class="column free">
 
             <div class="header">
-                <h2 class="title">Features</h2>
-                <h3 class="price"><span>{{ tariff.price }}$</span>per month</h3>
+                <h2 class="title">{% trans "Features" %}</h2>
+                <h3 class="price"><span>{{ tariff.price }}$</span>{% trans "per month" %}</h3>
             </div><!-- end .header -->
 
             <ul class="features clearfix">
@@ -96,13 +97,13 @@
         </div><!-- end .column.free -->
 
             <div class="footer">
-                  <a class="button" href="/{{ request.LANGUAGE_CODE }}/dashboard/">View Dashboard</a>
+                  <a class="button" href="/{{ request.LANGUAGE_CODE }}/dashboard/">{% trans "View Dashboard" %}</a>
             </div><!-- end .footer -->
             <div class="footer">
-                <a class="button" href="/billing/">Update balance</a>
+                <a class="button" href="/{{ request.LANGUAGE_CODE }}/billing/">{% trans "Update balance" %}</a>
             </div><!-- end .footer -->
             <div class="footer">
-                <a class="button" href="/tariff/">Add features</a>
+                <a class="button" href="/{{ request.LANGUAGE_CODE }}/tariff/">{% trans "Add features" %}</a>
             </div><!-- end .footer -->
 
 

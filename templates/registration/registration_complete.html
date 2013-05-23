@@ -1,7 +1,16 @@
-{% extends "base.html"  %}
+{% extends "general/base.html" %}
+{% load i18n %}
+
+{% block title %}Registration{% endblock %}
+{% block signup_li %}class="current"{% endblock %}
 {% block content %}
-<h1>Регистрация завершена</h1>
-Спасибо за уделённое время. На ваш e-mail отправлен 
-код подтверждения. Необходимо подтвердить регистрацию, 
-просто кликнув по указанной ссылке.<br/><br/>
+<section id="content" class="container clearfix">
+    <header class="page-header">
+
+        <h1 class="page-title">{% trans "Registration complete" %}</h1>
+
+    </header><!-- end .page-header -->
+
+    Спасибо за уделённое время. На ваш e-mail отправлен код подтверждения. Необходимо подтвердить регистрацию, просто кликнув по указанной ссылке.
+</section><!-- end #content -->
 {% endblock %}

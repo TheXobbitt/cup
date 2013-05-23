@@ -42,7 +42,9 @@ def features(request):
     return render_to_response('general/features.html', locals(), context_instance = RequestContext(request))
 
 def pricing(request):
-    tariffs = Tariff.objects.all()
+    tariffs = Tariff.objects.order_by('price')
+    if request.user.is_authenticated():
+        my_tariff = UserProfile.objects.get(user=request.user).tariff.name
 
     return render_to_response('general/pricing-tables.html', locals(), context_instance = RequestContext(request))
 

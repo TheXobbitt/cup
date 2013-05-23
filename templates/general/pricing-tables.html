@@ -39,10 +39,14 @@
         </div><!-- end .column.features-list -->
 
         {% for tariff in tariffs %}
+        {% if tariff.name == my_tariff %}
+        <div class="column featured">
+        {% else %}
         <div class="column free">
+        {% endif %}
 
             <div class="header">
-                <h2 class="title">{{ tariff.name }}</h2>
+                <h2 class="title">"{{ tariff.name }}"</h2>
                 <h3 class="price"><span>${{ tariff.price }}</span>{% trans "per month" %}</h3>
             </div><!-- end .header -->
 
@@ -61,9 +65,14 @@
                 <li data-feature="11">{{ tariff.support }}</li>
             </ul><!-- end .features -->
 
+            {% if user.is_authenticated %}
             <div class="footer">
-                <a class="button" href="#">{% trans "Sign Up" %}</a>
+                {% if tariff.name != my_tariff %}
+                <a class="button" href="/{{ request.LANGUAGE_CODE }}/tariff/">{% trans "Change" %}</a>
+                {% else %}<br><br>
+                {% endif %}
             </div><!-- end .footer -->
+            {% endif %}
             
         </div><!-- end .column.free -->
         {% endfor %}
